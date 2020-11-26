@@ -1,8 +1,0 @@
-/* CSS Document */
-.fotos{padding-top: 100px;}
-
-.fotoBla, .fotoEch, .fotoAlb, .fotoHen {width: 200px; height: 200px; border: solid #FF0000 15px; opacity: .5;}
-
-.fotoBla:hover, .fotoEch:hover, .fotoAlb:hover, .fotoHen:hover {opacity: 1.0;}
-
-.carousel {background-color: lightgray;}
