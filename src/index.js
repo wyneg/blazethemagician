@@ -34,7 +34,7 @@ const client = new Client(connection);
 
 client.connect();
 
-client.query('SELECT txtcaps FROM blazecaps WHERE numcaps = 1')
+client.query('SELECT numcaps FROM blazecaps WHERE numcaps = 1')
     .then(response => {
         console.log(response.rows);
         client.end();
