@@ -1,43 +1,7 @@
 // JavaScript Document
 $(function () {
 	"use strict";
-	
-	$("a.dirweb").click(function (e) {
-       e.preventDefault();
-    });
     
-    $("#capitulos1").on("click", function () {
-		setTimeout(function () {
-		  $("#izqOff").attr("src", "images/Torch-izqOn.gif");
-		  $("#negrito1").css("opacity", "0.5");
-		  $(".torch").css("background", "linear-gradient(to right, #F2F5A9, #FF8000, black)");
-		
-		  setTimeout(function () {
-			$("#derOff").attr("src", "images/Torch-derOn.gif");
-			$("#negrito1").css("opacity", "0.5");
-			$(".torch").css("background", "linear-gradient(to left, #F2F5A9, #FAAC58, #FF8000)");
-			
-				setTimeout(function () {
-					$("#negrito1").css("opacity", "1");
-					$(".torch").css("background", "transparent");
-					$(".img").css("background", "");
-					$(".caca").css("pointer-events", "all");
-				}, 400);
-				
-			
-			         setTimeout(function () {
-				        $("#negrito1").css("opacity", "1");
-				        $(".torch").css("background", "transparent");
-				        $(".img").css("background", "");
-				        $(".caca").css("pointer-events", "all");
-			         }, 400);
-			
-		  }, 1000);
-		
-	}, 1000);
-	});
-    
-	
 	$("#izqOff").on("click", function () {
 		$("#izqOff").attr("src", "images/Torch-izqOn.gif");
 		if ($("#derOff").attr('src') === 'images/Torch-derOn.gif') {
