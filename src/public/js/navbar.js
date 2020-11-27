@@ -6,6 +6,27 @@ $(function () {
         $("#derOff").attr("src", "images/Torch-derOff.gif");
         $("#negrito1,#negrito2").css("opacity", "0");
     }*/
+
+    $("#inicio1").on("click", function () {
+        secciones(1);
+		fuegos(1);
+	});
+	
+	
+	$("#capitulos1").on("click", function () {
+        secciones(2);
+		fuegos(2);
+	});
+    
+    $("#galeria1").on("click", function () {
+        secciones(3);
+		fuegos(3);
+	});
+	
+	$("#autor1").on("click", function () {
+        secciones(4);
+		fuegos(4);
+	});
     
     function fuegos(llama) {
         
@@ -41,30 +62,4 @@ $(function () {
             $("#inicio,#galeria,#capitulos,#heder").attr("style", "display : none");
         }
     }
-    
-    
-    $("#inicio1").on("click", function () {
-        secciones(1);
-		fuegos(1);
-        //antorchas();
-	});
-	
-	
-	$("#capitulos1").on("click", function () {
-        secciones(2);
-		fuegos(2);
-	});
-    
-    $("#galeria1").on("click", function () {
-        secciones(3);
-		fuegos(3);
-        //antorchas();
-	});
-	
-	$("#autor1").on("click", function () {
-        secciones(4);
-		fuegos(4);
-        //antorchas();
-	});
-	
 });
