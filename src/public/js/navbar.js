@@ -29,18 +29,18 @@ $(function () {
 
     function fuegos() {
 
-        if(document.getElementById('inicio1')){
+        if($('#nav-link').getElementById === 'inicio1'){
             $("#fuego1").attr("src", "images/favicon11.gif");
             $("#fuego2,#fuego3,#fuego4").attr("src", "images/espacio.png");
             antorchas();
-        } else if(document.getElementById('capitulos1')){
+        } else if($('#nav-link').getElementById === 'capitulos1'){
             $("#fuego2").attr("src", "images/favicon11.gif");
             $("#fuego1,#fuego3,#fuego4").attr("src", "images/espacio.png");
-        } else if(document.getElementById('galeria1')){
+        } else if($('#nav-link').getElementById === 'galeria1'){
             $("#fuego3").attr("src", "images/favicon11.gif");
             $("#fuego1,#fuego2,#fuego4").attr("src", "images/espacio.png");
             antorchas();
-        } else if(document.getElementById('autor1')){
+        } else if($('#nav-link').getElementById === 'autor1'){
             $("#fuego4").attr("src", "images/favicon11.gif");
             $("#fuego1,#fuego2,#fuego3").attr("src", "images/espacio.png");
             antorchas();
