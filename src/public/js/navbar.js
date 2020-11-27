@@ -1,9 +1,9 @@
 $(function () {
     "use strict";
     
-    $("a.dirweb").click(function (e) {
+    /*$("a.dirweb").click(function (e) {
         e.preventDefault();
-     });
+     });*/
 
     $("#inicio1").on("click", function () {
         fuegos(1);
