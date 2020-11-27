@@ -1,21 +1,14 @@
 // JavaScript Document
 $(function () {
 	"use strict";
-    
-	$("#izqOff").on("click", function () {
-		$("#izqOff").attr("src", "images/Torch-izqOn.gif");
-		if ($("#derOff").attr('src') === 'images/Torch-derOn.gif') {
-			$("#negrito1").css("opacity", "1");
-			$(".torch").css("background", "transparent");
-			$(".img").css("background", "");
-			$(".caca").css("pointer-events", "all");
-		} else {
-			$("#negrito1").css("opacity", "0.5");
-			$(".torch").css("background", "linear-gradient(to right, transparent, #FF8000, black)");
-		}
-	});
-	
-	$("#derOff").on("click", function () {
+
+	function prenderAntorchas() {
+		prenderAntorchaIzq();
+		prenderAntorchaDer();
+		capLeidos();
+	}
+
+	function prenderAntorchaDer() {
 		$("#derOff").attr("src", "images/Torch-derOn.gif");
 		if ($("#izqOff").attr('src') === 'images/Torch-izqOn.gif') {
 			$("#negrito1").css("opacity", "1");
@@ -26,6 +19,27 @@ $(function () {
 			$("#negrito1").css("opacity", "0.5");
 			$(".torch").css("background", "linear-gradient(to left, transparent, #FF8000, black)");
 		}
+	}
+	
+	function prenderAntorchaIzq() {
+		$("#izqOff").attr("src", "images/Torch-izqOn.gif");
+		if ($("#derOff").attr('src') === 'images/Torch-derOn.gif') {
+			$("#negrito1").css("opacity", "1");
+			$(".torch").css("background", "transparent");
+			$(".img").css("background", "");
+			$(".caca").css("pointer-events", "all");
+		} else {
+			$("#negrito1").css("opacity", "0.5");
+			$(".torch").css("background", "linear-gradient(to right, transparent, #FF8000, black)");
+		}
+	}
+
+	$("#izqOff").on("click", function () {
+		prenderAntorchaIzq();
+	});
+	
+	$("#derOff").on("click", function () {
+		prenderAntorchaDer();
 	});
 	
 	$("#izqOff").on("dblclick", function () {

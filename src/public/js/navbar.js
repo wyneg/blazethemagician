@@ -12,7 +12,6 @@ $(function () {
     }
 
     $("#capitulos1").on("click", function () {
-        $("#capitulos1").attr("onclick","capLeidos();");
 		setTimeout(function () {
 		  $("#izqOff").attr("src", "images/Torch-izqOn.gif");
 		  $("#negrito1").css("opacity", "0.5");
@@ -44,25 +43,21 @@ $(function () {
 	});
 
     $("#inicio1").on("click", function () {
-        //secciones(1);
         fuegos(1);
         antorchas();
 	});
 	
 	
 	$("#capitulos1").on("click", function () {
-        //secciones(2);
 		fuegos(2);
 	});
     
     $("#galeria1").on("click", function () {
-        //secciones(3);
         fuegos(3);
         antorchas();
 	});
 	
 	$("#autor1").on("click", function () {
-        //secciones(4);
         fuegos(4);
         antorchas();
 	});
@@ -83,22 +78,4 @@ $(function () {
             $("#fuego1,#fuego2,#fuego3").attr("src", "images/espacio.png");
         }
     }
-    
-    /*function secciones(partes) {
-        
-        if (partes === 1) {
-            $("#inicio").attr("style", "display : inline");
-            $("#heder").attr("style", "display : block");
-            $("#capitulos,#galeria,#autor").attr("style", "display : none");
-        } else if (partes === 2) {
-            $("#capitulos").attr("style", "background : black");
-            $("#inicio,#galeria,#autor,#heder").attr("style", "display : none");
-        } else if (partes === 3) {
-            $("#galeria").attr("style", "display : inline");
-            $("#inicio,#capitulos,#autor,#heder").attr("style", "display : none");
-        } else if (partes === 4) {
-            $("#autor").attr("style", "display : inline");
-            $("#inicio,#galeria,#capitulos,#heder").attr("style", "display : none");
-        }
-    }*/
 });
