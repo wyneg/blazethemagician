@@ -1,6 +1,8 @@
 function capLeidos() {
     var i;
     for (i = 1; i <= 100; i++) {
+        console.log(localStorage.getItem("Capitulo"+i));
+        console.log(String(i));
         if (localStorage.getItem("Capitulo"+i) === String(i)) {
             document.getElementById("modal"+i).innerHTML = "Cap&iacute;tulo "+i+" (leído)";
         }
@@ -29,7 +31,10 @@ function showCap(val) {
     }
    
     if (typeof(Storage) !== 'undefined') {
-       localStorage.setItem("Capitulo" + val, val);
+        console.log(typeof(Storage) + 'defined');
+        localStorage.setItem("Capitulo" + val, val);
+    } else {
+        console.log(typeof(Storage) + 'undefined');
     }
    
 }
