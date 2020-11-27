@@ -1,4 +1,4 @@
-function capLeidos() {
+document.getElementById('capitulos1').addEventListener('click', function(){
     var i;
     for (i = 1; i <= 100; i++) {
         console.log(localStorage.getItem("Capitulo"+i));
@@ -7,7 +7,7 @@ function capLeidos() {
             document.getElementById("modal"+i).innerHTML = "Cap&iacute;tulo "+i+" (leído)";
         }
     }
-}
+});
 
 function showCap(val) {
     if (val === "") {
