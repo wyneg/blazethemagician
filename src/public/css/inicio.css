@@ -9,35 +9,3 @@
 .inicio{padding-top: 100px;}
 .blaze {width: 30%; height: 30%; border: 5px solid #FFD700;}
 .custom-control-input:checked~.custom-control-label::before {background-color: #cd7e2e; border-color: #ff0000; box-shadow: none;}
-
-/* Caps */
-#negrito1 {opacity: 0;}
-.torch {background-color: black; padding-top: 100px; padding-left: 0px; padding-right: 0px; margin-left: auto; margin-right: auto;}
-.caca {pointer-events: none; min-height: 100%;}
-#capis.modal-body p {font-size: 1.4em; color: black; width: 40%; margin-left: 10%} 
-.cajita {border: 20px solid transparent; border-image-source: url(../images/webp/penta4.webp); border-image-slice: 19 19; border-image-repeat: round; padding: 15px; font-family: Constantia, Lucida Bright, DejaVu Serif, Georgia, serif; float: inherit;}
-.links {padding: 3px;}
-.link {padding-top: 0px; padding-left: 3px; padding-right: 3px; padding-bottom: 3px;}
-.pags{background-color: #1b95e0; white-space: pre-wrap;}
-#antorchasgif {padding-left: 0px; padding-right: 0px; margin-left: 0px; margin-right: 0px; width: 100vw;}
-#izqOff {float: left;}
-#derOff {float: right;}
-#caeza.modal-header {background-image: url(../images/webp/pergamino1.webp); background-repeat: no-repeat; border: 0 none; display: list-item; padding: 25px; margin: 0;}
-#capis.modal-body {background-image: url(../images/webp/pergamino2.webp); background-repeat: repeat-y; border: 0 none; display: list-item; padding: 0; margin: 0;}
-#pata.modal-footer {background-image: url(../images/webp/pergamino3.webp); background-repeat: no-repeat; border: 0 none; display: list-item; padding: 30px; margin: 0;}
-#contenido.modal-content{background-color: transparent !important; width: 100vw;}
-.modal-header .close {position: fixed; top: 20px; right: 250px; width: 40px; height: 40px; opacity: 1; z-index: 10; color: white;}
-
-@media screen and (max-device-width: 480px) {
-	#cap1.modal-dialog {margin: auto 10% auto 10%;}
-	#capis.modal-body p {width: 50%; margin-left: 15%; font-size: 2.0em; color: black;}
-	.torch {background-color: black; padding-top: 100px; padding-left: 0px; padding-right: 0px; margin-left: auto; margin-right: auto; height: 100vh;}
-	.modal-header .close {position: fixed; top: 20px; right: 100px; width: 40px; height: 40px; opacity: 1; z-index: 10; color: white;}
-}
-
-/* Galeria */
-
-.fotos{padding-top: 100px;}
-.fotoBla, .fotoEch, .fotoAlb, .fotoHen {width: 200px; height: 200px; border: solid #FF0000 15px; opacity: .5;}
-.fotoBla:hover, .fotoEch:hover, .fotoAlb:hover, .fotoHen:hover {opacity: 1.0;}
-.carousel {background-color: lightgray;}
