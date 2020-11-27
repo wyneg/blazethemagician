@@ -44,25 +44,25 @@ $(function () {
 	});
 
     $("#inicio1").on("click", function () {
-        secciones(1);
+        //secciones(1);
         fuegos(1);
         antorchas();
 	});
 	
 	
 	$("#capitulos1").on("click", function () {
-        secciones(2);
+        //secciones(2);
 		fuegos(2);
 	});
     
     $("#galeria1").on("click", function () {
-        secciones(3);
+        //secciones(3);
         fuegos(3);
         antorchas();
 	});
 	
 	$("#autor1").on("click", function () {
-        secciones(4);
+        //secciones(4);
         fuegos(4);
         antorchas();
 	});
@@ -84,7 +84,7 @@ $(function () {
         }
     }
     
-    function secciones(partes) {
+    /*function secciones(partes) {
         
         if (partes === 1) {
             $("#inicio").attr("style", "display : inline");
@@ -100,5 +100,5 @@ $(function () {
             $("#autor").attr("style", "display : inline");
             $("#inicio,#galeria,#capitulos,#heder").attr("style", "display : none");
         }
-    }
+    }*/
 });
