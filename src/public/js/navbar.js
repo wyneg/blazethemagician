@@ -5,7 +5,7 @@ $(function () {
         e.preventDefault();
      });
 
-     $("#inicio1").on("click", function () {
+    $("#inicio1").on("click", function () {
         fuegos(1);
         antorchas();
 	});
@@ -31,19 +31,26 @@ $(function () {
     }
 
     function fuegos(llama) {
-        
-        if (llama === 1) {
-            $("#fuego1").attr("src", "images/favicon11.gif");
-            $("#fuego2,#fuego3,#fuego4").attr("src", "images/espacio.png");
-        } else if (llama === 2) {
-            $("#fuego2").attr("src", "images/favicon11.gif");
-            $("#fuego1,#fuego3,#fuego4").attr("src", "images/espacio.png");
-        } else if (llama === 3) {
-            $("#fuego3").attr("src", "images/favicon11.gif");
-            $("#fuego1,#fuego2,#fuego4").attr("src", "images/espacio.png");
-        } else if (llama === 4) {
-            $("#fuego4").attr("src", "images/favicon11.gif");
-            $("#fuego1,#fuego2,#fuego3").attr("src", "images/espacio.png");
+
+        switch(llama) {
+            case 1:
+                $("#fuego1").attr("src", "images/favicon11.gif");
+                $("#fuego2,#fuego3,#fuego4").attr("src", "images/espacio.png");
+                break;
+            case 2:
+                $("#fuego2").attr("src", "images/favicon11.gif");
+                $("#fuego1,#fuego3,#fuego4").attr("src", "images/espacio.png");
+                break;
+            case 3:
+                $("#fuego3").attr("src", "images/favicon11.gif");
+                $("#fuego1,#fuego2,#fuego4").attr("src", "images/espacio.png");
+                break;
+            case 4:
+                $("#fuego4").attr("src", "images/favicon11.gif");
+                $("#fuego1,#fuego2,#fuego3").attr("src", "images/espacio.png");
+                break;
+            default:
+                console.log('¿Qué pasó aquí?');
         }
     }
 });
