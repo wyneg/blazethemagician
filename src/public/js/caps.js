@@ -3,8 +3,8 @@ document.getElementById('capitulos1').addEventListener('click', function(){
     for (i = 1; i <= 100; i++) {
         console.log(localStorage.getItem("Capitulo"+i));
         console.log(String(i));
-        if (localStorage.getItem("Capitulo"+i) === String(i)) {
-            document.getElementById("modal"+i).innerHTML = "Cap&iacute;tulo "+i+" (leído)";
+        if (localStorage.getItem("Capitulo"+i) === i) {
+            document.getElementById("modal" + String(i)).innerHTML = "Cap&iacute;tulo " + String(i) + " (leído)";
         }
     }
 });
