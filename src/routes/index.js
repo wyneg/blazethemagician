@@ -9,15 +9,15 @@ router.get('/', (req, res) => {
 });
 
 router.get('/capitulos', (req, res) => {
-    res.render('capitulos.html', { title: 'Capìtulos'});
+    res.render('/app/src/views/capitulos.html', { title: 'Capìtulos'});
 });
 
 router.get('/galeria', (req, res) => {
-    res.render('galeria.html', { title: 'Galería'});
+    res.render('/app/src/views/galeria.html', { title: 'Galería'});
 });
 
 router.get('/autor', (req, res) => {
-    res.render('autor.html', { title: 'Wyneg S. Rhuntar'});
+    res.render('/app/src/views/autor.html', { title: 'Wyneg S. Rhuntar'});
 });
 
 module.exports = router;
