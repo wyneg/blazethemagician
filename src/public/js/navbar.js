@@ -6,51 +6,44 @@ $(function () {
      });*/
 
     $("#inicio1").on("click", function () {
-        fuegos(1);
-        antorchas();
+        fuegos();
 	});
 	
 	$("#capitulos1").on("click", function () {
-        fuegos(2);
+        fuegos();
 	});
     
     $("#galeria1").on("click", function () {
-        fuegos(3);
-        antorchas();
+        fuegos();
 	});
 	
 	$("#autor1").on("click", function () {
-        fuegos(4);
-        antorchas();
+        fuegos();
 	});
     
     function antorchas() {
         $("#izqOff").attr("src", "images/Torch-izqOff.gif");
         $("#derOff").attr("src", "images/Torch-derOff.gif");
-        $("#negrito1,#negrito2").css("opacity", "0");
+        //$("#negrito1").css("opacity", "0");
     }
 
-    function fuegos(llama) {
+    function fuegos() {
 
-        switch(llama) {
-            case 1:
-                $("#fuego1").attr("src", "images/favicon11.gif");
-                $("#fuego2,#fuego3,#fuego4").attr("src", "images/espacio.png");
-                break;
-            case 2:
-                $("#fuego2").attr("src", "images/favicon11.gif");
-                $("#fuego1,#fuego3,#fuego4").attr("src", "images/espacio.png");
-                break;
-            case 3:
-                $("#fuego3").attr("src", "images/favicon11.gif");
-                $("#fuego1,#fuego2,#fuego4").attr("src", "images/espacio.png");
-                break;
-            case 4:
-                $("#fuego4").attr("src", "images/favicon11.gif");
-                $("#fuego1,#fuego2,#fuego3").attr("src", "images/espacio.png");
-                break;
-            default:
-                console.log('¿Qué pasó aquí?');
+        if(document.getElementById('inicio1')){
+            $("#fuego1").attr("src", "images/favicon11.gif");
+            $("#fuego2,#fuego3,#fuego4").attr("src", "images/espacio.png");
+            antorchas();
+        } else if(document.getElementById('capitulos1')){
+            $("#fuego2").attr("src", "images/favicon11.gif");
+            $("#fuego1,#fuego3,#fuego4").attr("src", "images/espacio.png");
+        } else if(document.getElementById('galeria1')){
+            $("#fuego3").attr("src", "images/favicon11.gif");
+            $("#fuego1,#fuego2,#fuego4").attr("src", "images/espacio.png");
+            antorchas();
+        } else if(document.getElementById('autor1')){
+            $("#fuego4").attr("src", "images/favicon11.gif");
+            $("#fuego1,#fuego2,#fuego3").attr("src", "images/espacio.png");
+            antorchas();
         }
     }
 });
