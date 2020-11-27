@@ -5,13 +5,14 @@ $(function () {
         e.preventDefault();
      });
     
-    /*function antorchas() {
+    function antorchas() {
         $("#izqOff").attr("src", "images/Torch-izqOff.gif");
         $("#derOff").attr("src", "images/Torch-derOff.gif");
         $("#negrito1,#negrito2").css("opacity", "0");
-    }*/
+    }
 
     $("#capitulos1").on("click", function () {
+        $("#capitulos1").attr("onclick","capLeidos();");
 		setTimeout(function () {
 		  $("#izqOff").attr("src", "images/Torch-izqOn.gif");
 		  $("#negrito1").css("opacity", "0.5");
@@ -44,7 +45,8 @@ $(function () {
 
     $("#inicio1").on("click", function () {
         secciones(1);
-		fuegos(1);
+        fuegos(1);
+        antorchas();
 	});
 	
 	
@@ -55,12 +57,14 @@ $(function () {
     
     $("#galeria1").on("click", function () {
         secciones(3);
-		fuegos(3);
+        fuegos(3);
+        antorchas();
 	});
 	
 	$("#autor1").on("click", function () {
         secciones(4);
-		fuegos(4);
+        fuegos(4);
+        antorchas();
 	});
     
     function fuegos(llama) {
