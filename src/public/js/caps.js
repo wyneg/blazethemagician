@@ -1,11 +1,11 @@
-document.getElementById('capitulos1').addEventListener('click', function(){
+function capsLeidos(){
     var i;
     for (i = 1; i <= 100; i++) {
         if (localStorage.getItem("Capitulo" + String(i)) === String(i)) {
             document.getElementById("modal" + String(i)).innerHTML = "Cap&iacute;tulo " + String(i) + " (leído)";
         }
     }
-});
+}
 
 function showCap(val) {
     if (val === "") {
