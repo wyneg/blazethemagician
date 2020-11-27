@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+</head>
+<body>
+    <!--Sección Galería-->
+
+<div id="galeria" style="display: none">
+
+    <div class="container fotos">
+        <div class="row">
+            <div class="col-sm-6 text-center">
+                <img class="rounded-circle fotoBla" id="blaze" src="images/webp/nombreBlaze.webp" alt="blaze" data-toggle="modal" data-target="#modBlaze" />		
+            </div>
+            <div class="col-sm-6 text-center">
+                <img class="rounded-circle fotoEch" id="echleon" src="images/webp/nombreEchleon.webp" alt="echleon" data-toggle="modal" data-target="#modEch"/>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container fotos">
+        <div class="row">
+            <div class="col-sm-6 text-center">
+                <img class="rounded-circle fotoAlb" id="albert" src="images/webp/nombreAlbert.webp" alt="albert" data-toggle="modal" data-target="#modAlb"/>
+            </div>
+            <div class="col-sm-6 text-center">
+                <img class="rounded-circle fotoHen" id="hene" src="images/webp/nombreHana.webp" alt="hana" data-toggle="modal" data-target="#modHen"/>
+            </div>
+        </div>
+    </div>
+        
+    <div class="modal fade bd-example-modal-lg" id="modBlaze" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header modfotos">
+            <h3 class="modal-title" id="blaicita">Blaze</h3>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">&times;</span> </button>
+          </div>
+          <div class="modal-body text-center modfotos"> 
+              <div class="carousel slide" data-ride="carousel" id="carrusel">
+                  <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <img src="images/webp/blaze1.webp" alt="1eraFotito" />			  
+                      </div>
+                      <div class="carousel-item">
+                        <img src="images/webp/blaze2.webp" alt="2daFotito" />			  
+                      </div>
+                      <div class="carousel-item">
+                        <img src="images/webp/blazeCarr.webp" alt="3raFotito" />			  
+                      </div>
+                      <div class="carousel-item">
+                        <img src="images/webp/portadaBlaze.webp" alt="4taFotito" />			  
+                      </div>
+                      <div class="carousel-item">
+                        <img src="images/webp/portadaBlaze2.webp" alt="5taFotito" />			  
+                      </div>
+                  </div>
+                  <a class="carousel-control-prev" href="#carrusel" role="button" data-slide="prev">
+                      <span class="carousel-control-prev-icon carru" aria-hidden="true"></span>
+                      <span class="sr-only">Anterior</span>
+                  </a>
+                  <a class="carousel-control-next carru" href="#carrusel" role="button" data-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="sr-only">Siguiente</span>
+                  </a>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+        
+    <div class="modal fade bd-example-modal-lg" id="modEch" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header modfotos">
+            <h3 class="modal-title" id="ekleon">Echleón</h3>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">&times;</span> </button>
+          </div>
+          <div class="modal-body text-center modfotos"> 
+              <div class="carousel slide" data-ride="carousel" id="carrusel1">
+                  <div class="carousel-inner">
+                      <!--<div class="carousel-item active">
+                        <img alt="1eraFotito" />			  
+                      </div>
+                      <div class="carousel-item">
+                        <img alt="2daFotito"/>			  
+                      </div>-->
+                  </div>
+                  <a class="carousel-control-prev" href="#carrusel1" role="button" data-slide="prev">
+                      <span class="carousel-control-prev-icon carru" aria-hidden="true"></span>
+                      <span class="sr-only">Anterior</span>
+                  </a>
+                  <a class="carousel-control-next carru" href="#carrusel1" role="button" data-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="sr-only">Siguiente</span>
+                  </a>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+        
+    <div class="modal fade bd-example-modal-lg" id="modAlb" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header modfotos">
+            <h3 class="modal-title" id="albercito">Albert</h3>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">&times;</span> </button>
+          </div>
+          <div class="modal-body text-center modfotos"> 
+              <div class="carousel slide" data-ride="carousel" id="carrusel2">
+                  <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <img src="images/webp/albert1.webp" alt="1eraFotito" />			  
+                      </div>
+                      <!--<div class="carousel-item">
+                        <img alt="2daFotito" />			  
+                      </div>-->
+                  </div>
+                  <a class="carousel-control-prev" href="#carrusel2" role="button" data-slide="prev">
+                      <span class="carousel-control-prev-icon carru" aria-hidden="true"></span>
+                      <span class="sr-only">Anterior</span>
+                  </a>
+                  <a class="carousel-control-next carru" href="#carrusel2" role="button" data-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="sr-only">Siguiente</span>
+                  </a>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+        
+    <div class="modal fade bd-example-modal-lg" id="modHen" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header modfotos">
+            <h3 class="modal-title" id="jana">Hänä</h3>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">&times;</span> </button>
+          </div>
+          <div class="modal-body text-center modfotos"> 
+              <div class="carousel slide" data-ride="carousel" id="carrusel3">
+                  <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <img src="images/webp/heneCarr.webp" alt="1eraFotito" />			  
+                      </div>
+                      <!--<div class="carousel-item">
+                        <img alt="2daFotito" width="288" height="325" />			  
+                      </div>-->
+                  </div>
+                  <a class="carousel-control-prev" href="#carrusel3" role="button" data-slide="prev">
+                      <span class="carousel-control-prev-icon carru" aria-hidden="true"></span>
+                      <span class="sr-only">Anterior</span>
+                  </a>
+                  <a class="carousel-control-next carru" href="#carrusel3" role="button" data-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="sr-only">Siguiente</span>
+                  </a>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+        
+    <div class="container col-12" style="height: 1px" ></div>
+    
+</body>
+</html>
