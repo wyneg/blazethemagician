@@ -29,8 +29,7 @@ function showCap(val) {
     }
    
     if (typeof(Storage) !== 'undefined') {
-        console.log(typeof(Storage) + 'defined');
-        localStorage.setItem("Capitulo" + val, val);
+        localStorage.setItem("Capitulo" + String(val), String(val));
     } else {
         console.log(typeof(Storage) + 'undefined');
     }
@@ -41,7 +40,7 @@ function pergamino(val) {
     $('#mod1').on('hidden.bs.modal', function (e) {
        $("#perg"+val).attr("src", "images/pergaminoquemandose.gif");
         setTimeout(function () {
-            document.getElementById("modal"+val).innerHTML = "Cap&iacute;tulo "+val+" (leído)";
+            document.getElementById("modal" + String(val)).innerHTML = "Cap&iacute;tulo "+String(val)+" (leído)";
         }, 2800);
     });
 }
