@@ -39,7 +39,7 @@ $(function () {
 		  }, 1000);
 		
 	}, 1000);
-	});
+	};
 
     $("#inicio1").on("click", function () {
         fuegos(1);
