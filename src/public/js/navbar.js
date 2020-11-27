@@ -1,11 +1,11 @@
 $(function () {
 	"use strict";
     
-    function antorchas() {
+    /*function antorchas() {
         $("#izqOff").attr("src", "images/Torch-izqOff.gif");
         $("#derOff").attr("src", "images/Torch-derOff.gif");
         $("#negrito1,#negrito2").css("opacity", "0");
-    }
+    }*/
     
     function fuegos(llama) {
         
@@ -46,7 +46,7 @@ $(function () {
     $("#inicio1").on("click", function () {
         secciones(1);
 		fuegos(1);
-        antorchas();
+        //antorchas();
 	});
 	
 	
@@ -58,13 +58,13 @@ $(function () {
     $("#galeria1").on("click", function () {
         secciones(3);
 		fuegos(3);
-        antorchas();
+        //antorchas();
 	});
 	
 	$("#autor1").on("click", function () {
         secciones(4);
 		fuegos(4);
-        antorchas();
+        //antorchas();
 	});
 	
 });

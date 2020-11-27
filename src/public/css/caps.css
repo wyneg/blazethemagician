@@ -10,7 +10,6 @@
 .cajita {border: 20px solid transparent; border-image-source: url(../images/webp/penta4.webp); border-image-slice: 19 19; border-image-repeat: round; padding: 15px; font-family: Constantia, Lucida Bright, DejaVu Serif, Georgia, serif; float: inherit;}
 .links {padding: 3px;}
 .link {padding-top: 0px; padding-left: 3px; padding-right: 3px; padding-bottom: 3px;}
-.pags{background-color: #1b95e0; white-space: pre-wrap;}
 #antorchasgif {padding-left: 0px; padding-right: 0px; margin-left: 0px; margin-right: 0px; width: 100vw;}
 #izqOff {float: left;}
 #derOff {float: right;}
