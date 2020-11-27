@@ -83,6 +83,16 @@ $(function () {
 			$(".caca").css("pointer-events", "none");
 		}
 	});
+
+	function capLeidos() {
+		var i;
+		for (i = 1; i <= 100; i++) {
+			if (localStorage.getItem("Capitulo"+i) === String(i)) {
+				document.getElementById("modal"+i).innerHTML = "Cap&iacute;tulo "+i+" (leído)";
+			}
+		}
+	}
+
 });
 
 function showCap(val) {
@@ -112,14 +122,7 @@ function showCap(val) {
    
 }
 
-function capLeidos() {
-	var i;
-	for (i = 1; i <= 80; i++) {
-		if (localStorage.getItem("Capitulo"+i) === String(i)) {
-			document.getElementById("modal"+i).innerHTML = "Cap&iacute;tulo "+i+" (leído)";
-		}
-	}
-}
+
 
 function pergamino(val) {
 	$('#mod1').on('hidden.bs.modal', function (e) {
