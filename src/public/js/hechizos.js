@@ -2,12 +2,7 @@
 $(function () {
 	"use strict";
 
-	function prenderAntorchas() {
-		capLeidos();
-		animAntorchas();
-	}
-
-	function animAntorchas () {
+	$('#capitulos1').on('click', function() {
 		setTimeout(function () {
 		  $("#izqOff").attr("src", "images/Torch-izqOn.gif");
 		  $("#negrito1").css("opacity", "0.5");
@@ -35,7 +30,7 @@ $(function () {
 		  }, 1000);
 		
 	}, 1000);
-	};
+	});
 
 	$("#derOff").on("click", function () {
 		$("#derOff").attr("src", "images/Torch-derOn.gif");
@@ -130,7 +125,7 @@ function pergamino(val) {
 	/*$('#mod1').on('hidden.bs.modal', function (e) {
 	   //$("#perg"+val).attr("src", "images/pergaminoquemandose.gif");
 	});*/
-	document.getElementById('#mod1').on('hidden.bs.modal') = function(){
+	document.getElementById('#mod1').on('hidden.bs.modal') = function(e){
 		document.getElementById('#perg'+val).attr('src', 'images/pergaminoquemandose.gif');
 		setTimeout(function () {
 			document.getElementById("modal"+val).innerHTML = "Cap&iacute;tulo "+val+" (leído)";
