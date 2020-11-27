@@ -11,7 +11,7 @@ $(function () {
         $("#negrito1,#negrito2").css("opacity", "0");
     }
 
-    $("#capitulos1").on("click", function () {
+    function animAntorchas () {
 		setTimeout(function () {
 		  $("#izqOff").attr("src", "images/Torch-izqOn.gif");
 		  $("#negrito1").css("opacity", "0.5");
@@ -29,7 +29,6 @@ $(function () {
 					$(".caca").css("pointer-events", "all");
 				}, 400);
 				
-			
 			         setTimeout(function () {
 				        $("#negrito1").css("opacity", "1");
 				        $(".torch").css("background", "transparent");
@@ -49,7 +48,8 @@ $(function () {
 	
 	
 	$("#capitulos1").on("click", function () {
-		fuegos(2);
+        fuegos(2);
+        animAntorchas();
 	});
     
     $("#galeria1").on("click", function () {
