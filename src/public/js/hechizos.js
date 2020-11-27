@@ -122,13 +122,14 @@ function capLeidos() {
 }
 
 function pergamino(val) {
-	/*$('#mod1').on('hidden.bs.modal', function (e) {
-	   //$("#perg"+val).attr("src", "images/pergaminoquemandose.gif");
-	});*/
-	document.getElementById('#mod1').on('hidden.bs.modal') = function(e){
-		document.getElementById('#perg'+val).attr('src', 'images/pergaminoquemandose.gif');
+	$('#mod1').on('hidden.bs.modal', function (e) {
+	   $("#perg"+val).attr("src", "images/pergaminoquemandose.gif");
 		setTimeout(function () {
 			document.getElementById("modal"+val).innerHTML = "Cap&iacute;tulo "+val+" (leído)";
 		}, 2800);
-	};
+	});
+	/*document.getElementById('#mod1').on('hidden.bs.modal') = function(e){
+		document.getElementById('#perg'+val).attr('src', 'images/pergaminoquemandose.gif');
+		
+	};*/
 }
