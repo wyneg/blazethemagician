@@ -16,13 +16,13 @@ const client = new Client(connection);
 
 client.connect();
 
-router.get('/capitulos/:id', (req, res, next) => {
+/*router.get('/capitulos/:id', (req, res, next) => {
     res.render('/app/src/views/galeria.html', {output : req.params.id});
     console.log(req.params.id);
-});
+});*/
 
-
-client.query('SELECT txtcaps FROM blazecaps WHERE numcaps = 1' /*+ String(val)*/)
+/*+ String(val)*/
+client.query('SELECT numcaps FROM blazecaps WHERE numcaps = 1')
 .then(response => {
     console.log(response.rows);
     client.end();
