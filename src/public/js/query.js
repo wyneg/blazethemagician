@@ -13,11 +13,12 @@ const connection = {
     port: process.env.DB_PORT,
 }
 
-const client = new Client(connection);
-
-client.connect();
 
 function showCap(val){
+    const client = new Client(connection);
+
+    client.connect();
+    
     client.query('SELECT numcaps FROM blazecaps WHERE numcaps = ' + String(val))
     .then(response => {
         console.log(response.rows);
