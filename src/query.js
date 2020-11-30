@@ -21,7 +21,7 @@ router.get('/capitulos/:id', (req, res, next) => {
 });
 
 
-client.query('SELECT txtcaps FROM blazecaps WHERE numcaps = ' + String(val))
+client.query('SELECT txtcaps FROM blazecaps WHERE numcaps = 1' /*+ String(val)*/)
 .then(response => {
     console.log(response.rows);
     client.end();
