@@ -4,7 +4,7 @@
 const { Client } = require('pg');
 const router = require('./routes');
 
-console.log('user : ' + process.env.DB_USER + 'pass : ' + process.env.DB_PASSWORD);
+//console.log('user : ' + process.env.DB_USER + 'pass : ' + process.env.DB_PASSWORD);
 
 /*const connection = {
     user: process.env.DB_USER,
@@ -36,8 +36,8 @@ client.query('SELECT numcaps FROM blazecaps WHERE numcaps = 1')
     console.log(err);
 });
 
-if (typeof(Storage) !== 'undefined') {
+/*if (typeof(Storage) !== 'undefined') {
     localStorage.setItem("Capitulo" + String(cal), String(val));
 } else {
     console.log(typeof(Storage) + 'undefined');
-}
+}*/
