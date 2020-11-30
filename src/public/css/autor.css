@@ -2,3 +2,6 @@
 .img {background-image: url(../images/webp/lads.webp), url(../images/webp/lads.webp), url(../images/webp/fondo1.webp); background-repeat: repeat-y, repeat-y, repeat; background-position: left, right, center; min-height: 100%; }
 #barra {background-color: black; border-top: solid #FFFFFF 1px; border-bottom: solid #FFFFFF 1px;}
 .pags{background-color: #1b95e0; white-space: pre-wrap;}
+.fondo {background-color: rgba(255,255,255,0.30);}
+.links {padding: 3px;}
+.link {padding-top: 0px; padding-left: 3px; padding-right: 3px; padding-bottom: 3px;}
