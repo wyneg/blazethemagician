@@ -9,7 +9,7 @@ router.get('/', (req, res) => {
 });
 
 router.get('/capitulos', (req, res) => {
-    res.render('/app/src/views/capitulos.html', { title: 'Capìtulos'});
+    res.render('/app/src/views/capitulos.html', { title: 'Capítulos'});
 });
 
 router.get('/galeria', (req, res) => {
