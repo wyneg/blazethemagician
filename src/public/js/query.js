@@ -3,7 +3,7 @@ require('dotenv').config();
 
 const { Client } = require('pg');
 
-const router = require('./routes');
+const router = require('app/src/routes');
 
 const connection = {
     user: process.env.DB_USER,
