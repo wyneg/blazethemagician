@@ -16,25 +16,25 @@ function antorchas(){
     setTimeout(function () {
         document.getElementById("izqOff").setAttribute("src", "images/Torch-izqOn.gif");
         document.getElementById("negrito1").setAttribute("style", "opacity: 0.5");
-        document.getElementsById("capitulos").setAttribute("style", "background: linear-gradient(to right, #F2F5A9, #FF8000, black");
+        document.getElementById("capitulos").setAttribute("style", "background: linear-gradient(to right, #F2F5A9, #FF8000, black");
       
         setTimeout(function () {
           document.getElementById("derOff").setAttribute("src", "images/Torch-derOn.gif");
           document.getElementById("negrito1").setAttribute("style", "opacity: 0.5");
-          document.getElementsById("capitulos").setAttribute("style", "background: linear-gradient(to left, #F2F5A9, #FAAC58, #FF8000");
+          document.getElementById("capitulos").setAttribute("style", "background: linear-gradient(to left, #F2F5A9, #FAAC58, #FF8000");
           
               setTimeout(function () {
                   document.getElementById("negrito1").setAttribute("style", "opacity: 1");
-                  document.getElementsById("capitulos").setAttribute("style", "background: transparent");
-                  document.getElementsById("kurobodi").setAttribute("style", "background: ''");
-                  document.getElementsById("negrito1").setAttribute("style", "pointer-events: all");
+                  document.getElementById("capitulos").setAttribute("style", "background: transparent");
+                  document.getElementById("kurobodi").setAttribute("style", "background: ''");
+                  document.getElementById("negrito1").setAttribute("style", "pointer-events: all");
               }, 400);
               
                    setTimeout(function () {
                       document.getElementById("negrito1").setAttribute("style", "opacity: 1");
-                      document.getElementsById("capitulos").setAttribute("style", "background: transparent");
-                      document.getElementsById("kurobodi").setAttribute("style", "background: ''");
-                      document.getElementsById("negrito1").setAttribute("style", "pointer-events: all");
+                      document.getElementById("capitulos").setAttribute("style", "background: transparent");
+                      document.getElementById("kurobodi").setAttribute("style", "background: ''");
+                      document.getElementById("negrito1").setAttribute("style", "pointer-events: all");
                    }, 400);
           
         }, 1000);
