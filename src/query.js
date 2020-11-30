@@ -32,7 +32,7 @@ if(client.connect()){
     console.log("no conectado...");
 }
 
-client.query('SELECT numcaps FROM blazecaps WHERE numcaps = 1')
+client.query('SELECT numcaps FROM blazecaps')
 .then(response => {
     console.log(response.rows);
     client.end();
