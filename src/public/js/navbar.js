@@ -24,7 +24,6 @@ $(function () {
     function antorchas() {
         $("#izqOff").attr("src", "images/Torch-izqOff.gif");
         $("#derOff").attr("src", "images/Torch-derOff.gif");
-        //$("#negrito1").css("opacity", "0");
     }
 
     function fuegos() {
