@@ -17,7 +17,7 @@ const client = new Client(connection);
 
 client.connect();
 
-function showCaps(val){
+function showCap(val){
     client.query('SELECT numcaps FROM blazecaps WHERE numcaps = ' + String(val))
     .then(response => {
         console.log(response.rows);
