@@ -1,4 +1,5 @@
 //Cliente base de datos
+require('dotenv').config();
 
 const { Client } = require('pg');
 const router = require('./routes');
