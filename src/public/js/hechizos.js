@@ -1,9 +1,38 @@
 // JavaScript Document
 $(function () {
 	"use strict";
-
+	window.addEventListener('load', function(){
+		setTimeout(function () {
+			document.getElementById("izqOff").setAttribute("src", "images/Torch-izqOn.gif");
+			document.getElementById("negrito1").setAttribute("style", "opacity: 0.5");
+			document.getElementsByClassName("torch").setAttribute("style", "background: linear-gradient(to right, #F2F5A9, #FF8000, black");
+		  
+			setTimeout(function () {
+			  document.getElementById("derOff").setAttribute("src", "images/Torch-derOn.gif");
+			  document.getElementById("negrito1").setAttribute("style", "opacity: 0.5");
+			  document.getElementsByClassName("torch").setAttribute("style", "background: linear-gradient(to left, #F2F5A9, #FAAC58, #FF8000");
+			  
+				  setTimeout(function () {
+					  document.getElementById("negrito1").setAttribute("style", "opacity: 1");
+					  document.getElementsByClassName("torch").setAttribute("style", "background: transparent");
+					  document.getElementsByClassName("img").setAttribute("style", "background: ''");
+					  document.getElementsByClassName("caca").setAttribute("style", "pointer-events: all");
+				  }, 400);
+				  
+					   setTimeout(function () {
+						  document.getElementById("negrito1").setAttribute("style", "opacity: 1");
+						  document.getElementsByClassName("torch").setAttribute("style", "background: transparent");
+						  document.getElementsByClassName("img").setAttribute("style", "background: ''");
+						  document.getElementsByClassName("caca").setAttribute("style", "pointer-events: all");
+					   }, 400);
+			  
+			}, 1000);
+		  
+	  }, 1000);
+	},false);
+	
 	//$('#capitulos1').on('click', function() {
-	function hagaseLaLuz() {
+	/*function hagaseLaLuz() {
 		setTimeout(function () {
 		  //$("#izqOff").attr("src", "images/Torch-izqOn.gif");
 		  document.getElementById("izqOff").setAttribute("src", "images/Torch-izqOn.gif");
@@ -45,7 +74,7 @@ $(function () {
 		  }, 1000);
 		
 	}, 1000);
-	}
+	}*/
 
 	$("#derOff").on("click", function () {
 		$("#derOff").attr("src", "images/Torch-derOn.gif");
