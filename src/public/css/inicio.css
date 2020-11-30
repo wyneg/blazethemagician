@@ -7,5 +7,5 @@
 .index {border: 20px solid transparent; border-image-source: url(../images/lis.png); border-image-slice: 25 25; border-image-repeat: space; font-family: 'MedievalSharp', cursive; font-size: 1.5em; font-weight: bolder; color: black; text-shadow: -1px 0 darkgray, 0 1px darkgray, 1px 0 darkgray, 0 -1px darkgray; padding: 20px; width: 650px; height: 670px; margin: auto;}
 .fondo {background-color: rgba(255,255,255,0.30);}
 .inicio{padding-top: 100px;}
-/*.blaze {width: 30%; height: 30%; border: 5px solid #FFD700;}
-.custom-control-input:checked~.custom-control-label::before {background-color: #cd7e2e; border-color: #ff0000; box-shadow: none;}*/
+.blaze {width: 30%; height: 30%; border: 5px solid #FFD700;}
+/*.custom-control-input:checked~.custom-control-label::before {background-color: #cd7e2e; border-color: #ff0000; box-shadow: none;}*/
