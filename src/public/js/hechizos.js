@@ -2,7 +2,8 @@
 $(function () {
 	"use strict";
 
-	$('#capitulos1').on('click', function() {
+	//$('#capitulos1').on('click', function() {
+	function hagaseLaLuz() {
 		setTimeout(function () {
 		  $("#izqOff").attr("src", "images/Torch-izqOn.gif");
 		  $("#negrito1").css("opacity", "0.5");
@@ -30,7 +31,7 @@ $(function () {
 		  }, 1000);
 		
 	}, 1000);
-	});
+	}
 
 	$("#derOff").on("click", function () {
 		$("#derOff").attr("src", "images/Torch-derOn.gif");
