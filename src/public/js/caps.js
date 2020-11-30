@@ -27,18 +27,8 @@ function antorchas(){
                   document.getElementById("negrito1").setAttribute("style", "opacity: 1; pointer-events: all");
                   document.getElementById("capitulos").setAttribute("style", "background: transparent");
                   document.getElementById("kurobodi").setAttribute("style", "background: ''");
-                  //document.getElementById("negrito1").setAttribute("style", "pointer-events: all");
               }, 400);
-              
-                   /*setTimeout(function () {
-                      document.getElementById("negrito1").setAttribute("style", "opacity: 1");
-                      document.getElementById("capitulos").setAttribute("style", "background: transparent");
-                      document.getElementById("kurobodi").setAttribute("style", "background: ''");
-                      //document.getElementById("negrito1").setAttribute("style", "pointer-events: all");
-                   }, 400);*/
-          
         }, 1000);
-      
   }, 1000);
 }
 
