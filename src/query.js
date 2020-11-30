@@ -1,17 +1,17 @@
 //Cliente base de datos
-const amb = require('dotenv').config();
+require('dotenv').config();
 
 const { Client } = require('pg');
 const router = require('./routes');
 
-console.log('user : ' + process.env.DB_USER + 'pass : ' + process.env.DB_PASSWORD);
+//console.log('user : ' + process.env.DB_USER + 'pass : ' + process.env.DB_PASSWORD);
 
 const connection = {
-    user: amb.DB_USER,
-    host: amb.DB_HOST,
-    database: amb.DB_DATABASE,
-    password: amb.DB_PASSWORD,
-    port: amb.DB_PORT
+    user: process.env.DB_USER,
+    host: process.env.DB_HOST,
+    database: process.env.DB_DATABASE,
+    password: process.env.DB_PASSWORD,
+    port: process.env.DB_PORT
 }
 
 const client = new Client(connection);
