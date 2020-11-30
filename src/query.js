@@ -4,6 +4,8 @@ const amb = require('dotenv').config();
 const { Client } = require('pg');
 const router = require('./routes');
 
+console.log('user : ' + amb.DB_USER + 'pass : ' + amb.DB_PASSWORD);
+
 const connection = {
     user: amb.DB_USER,
     host: amb.DB_HOST,
