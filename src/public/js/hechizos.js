@@ -2,7 +2,7 @@
 $(function () {
 	"use strict";
 
-	document.addEventListener('load', function(){
+	/*document.addEventListener('load', function(){
 		setTimeout(function () {
 			document.getElementById("izqOff").setAttribute("src", "images/Torch-izqOn.gif");
 			document.getElementById("negrito1").setAttribute("style", "opacity: 0.5");
@@ -30,7 +30,7 @@ $(function () {
 			}, 1000);
 		  
 	  }, 1000);
-	},false);
+	},false);*/
 
 	//$('#capitulos1').on('click', function() {
 	/*function hagaseLaLuz() {
