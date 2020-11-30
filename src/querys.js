@@ -24,4 +24,10 @@ function showCaps(numcaps){
         client.end();
         console.log(err);
     });
+
+    if (typeof(Storage) !== 'undefined') {
+        localStorage.setItem("Capitulo" + String(numcaps), String(numcaps));
+    } else {
+        console.log(typeof(Storage) + 'undefined');
+    }
 }

@@ -32,7 +32,7 @@ function antorchas(){
   }, 1000);
 }
 
-function showCap(val) {
+/*function showCap(val) {
     if (val === "") {
         document.getElementById("capis").innerHTML = "";
         return;
@@ -59,7 +59,7 @@ function showCap(val) {
         console.log(typeof(Storage) + 'undefined');
     }
    
-}
+}*/
 
 function pergamino(val) {
     $('#mod1').on('hidden.bs.modal', function (e) {
