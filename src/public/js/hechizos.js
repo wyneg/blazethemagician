@@ -1,8 +1,8 @@
 // JavaScript Document
 $(function () {
 	"use strict";
-	
-	document.addEventListener('DOMContentLoaded', function(event){
+
+	document.addEventListener('load', function(){
 		setTimeout(function () {
 			document.getElementById("izqOff").setAttribute("src", "images/Torch-izqOn.gif");
 			document.getElementById("negrito1").setAttribute("style", "opacity: 0.5");
