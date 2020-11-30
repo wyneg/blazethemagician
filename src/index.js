@@ -20,9 +20,7 @@ app.listen(process.env.PORT || 5000, () => {
     console.log('Server en puerto : ', process.env.PORT);
 });
 
-/*const { Client } = require('pg');
-
-const router = require('./routes');
+const { Client } = require('pg');
 
 const connection = {
     user: process.env.DB_USER,
@@ -44,4 +42,4 @@ client.query('SELECT numcaps FROM blazecaps')
 .catch(err => {
     client.end();
     console.log(err);
-});*/
+});
