@@ -1,11 +1,6 @@
 $(function () {
     "use strict";
 
-    window.onload = function () {
-        $("#fuego1").attr("src", "images/favicon11.gif");
-        $("#fuego2,#fuego3,#fuego4").attr("src", "images/espacio.png");
-    }
-
     $("#inicio1").on("click", function () {
         $("#fuego1").attr("src", "images/favicon11.gif");
         $("#fuego2,#fuego3,#fuego4").attr("src", "images/espacio.png");
