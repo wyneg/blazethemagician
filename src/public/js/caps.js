@@ -24,18 +24,18 @@ function antorchas(){
           document.getElementById("capitulos").setAttribute("style", "background: linear-gradient(to left, #F2F5A9, #FAAC58, #FF8000");
           
               setTimeout(function () {
-                  document.getElementById("negrito1").setAttribute("style", "opacity: 1");
+                  document.getElementById("negrito1").setAttribute("style", "opacity: 1; pointer-events: all");
                   document.getElementById("capitulos").setAttribute("style", "background: transparent");
                   document.getElementById("kurobodi").setAttribute("style", "background: ''");
                   //document.getElementById("negrito1").setAttribute("style", "pointer-events: all");
               }, 400);
               
-                   setTimeout(function () {
+                   /*setTimeout(function () {
                       document.getElementById("negrito1").setAttribute("style", "opacity: 1");
                       document.getElementById("capitulos").setAttribute("style", "background: transparent");
                       document.getElementById("kurobodi").setAttribute("style", "background: ''");
                       //document.getElementById("negrito1").setAttribute("style", "pointer-events: all");
-                   }, 400);
+                   }, 400);*/
           
         }, 1000);
       
