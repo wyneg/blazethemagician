@@ -43,7 +43,7 @@ router.get('/capitulos/', (req, res) => {
 
 router.post('/capitulos/', (req, res) => {
 
-    const cap = req.body.value;
+    const cap = req.body.buttonCap;
 
     try{
 
