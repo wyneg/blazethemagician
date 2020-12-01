@@ -38,12 +38,7 @@ client.connect();
 
 const queryString = 'SELECT numcaps FROM blazecaps';
 
-client.query(queryString, (err, rows) => {
-    if(err){
-        console.log("Falla" + err);
-        response.sendStatus(500);
-
-    }
-    response.json(rows);
-});
+client.query(queryString)
+.then(response => console.log(response.rows))
+.then(e => console.log(e.stack))
 
