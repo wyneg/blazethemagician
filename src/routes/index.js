@@ -27,11 +27,17 @@ router.get('/capitulos/:id', (req, res) => {
 
     client.connect();
 
-    const queryString = 'SELECT numcaps FROM blazecaps WHERE numcaps = ?';
+    try{
+        const queryString = 'SELECT numcaps FROM blazecaps WHERE numcaps = ?';
 
-    client.query(queryString, [capnum])
-    .then(response => console.log(response.rows))
-    .then(e => console.log(e));
+        client.query(queryString, [capnum])
+        .then(response => console.log(response.rows))
+        .then(e => console.log(e));
+    } catch(e){
+        console.log(e);
+    }
+
+    
 });
 
 router.get('/galeria', (req, res) => {
