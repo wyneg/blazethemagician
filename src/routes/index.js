@@ -12,12 +12,10 @@ router.get('/', (req, res) => {
     res.render('/app/src/views/index.html', { title: 'Bienvenido a Blaze!'});
 });
 
-router.post('/capitulos/', (req, res) => {
+router.get('/capitulos/', (req, res) => {
     res.render('/app/src/views/capitulos.html', { title: 'Capítulos'});
-    
-    try{
 
-        console.log("numero" +req.body.name);
+    try{
 
         const { Client } = require('pg');
 
