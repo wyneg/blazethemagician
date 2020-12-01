@@ -44,17 +44,14 @@ app.get('/capitulos', (req, res) => {
 
     const queryString = 'SELECT numcaps FROM blazecaps';
 
-    client.query(queryString)
-    .then(response => {
-        console.log(response.rows);
-        client.end();
-    })
-    .catch(err => {
-        client.end();
-        console.log(err);
+    client.query(queryString, (err, rows) => {
+        if(err){
+            console.log("Falla" + err);
+            res.sendStatus(500);
+
+        }
+        res.json(rows);
     });
-        //return response.rows;
-        console.log(res.rows);
 });
 
 
