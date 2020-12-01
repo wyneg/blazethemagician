@@ -4,9 +4,7 @@ const router = express.Router();
 
 const bodyParser = require('body-parser');
 
-const app = express();
-
-app.use(bodyParser.urlencoded({extended: false}))
+router.use(bodyParser.urlencoded({extended: false}));
 
 console.log(__dirname);
 
