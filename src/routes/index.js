@@ -9,25 +9,24 @@ router.get('/', (req, res) => {
 });
 
 router.get('/capitulos/:id', (req, res) => {
-    res.render('/app/src/views/capitulos.html', { title: 'Capítulos'});
-
-    const capnum = req.params.id;
-
-    const { Client } = require('pg');
-
-    const connection = {
-        user: process.env.DB_USER,
-        host: process.env.DB_HOST,
-        database: process.env.DB_DATABASE,
-        password: process.env.DB_PASSWORD,
-        port: process.env.DB_PORT,
-    }
-
-    const client = new Client(connection);
-
-    client.connect();
-
+    
     try{
+        const capnum = req.params.id;
+
+        const { Client } = require('pg');
+
+        const connection = {
+            user: process.env.DB_USER,
+            host: process.env.DB_HOST,
+            database: process.env.DB_DATABASE,
+            password: process.env.DB_PASSWORD,
+            port: process.env.DB_PORT,
+        }
+
+        const client = new Client(connection);
+
+        client.connect();
+
         const queryString = 'SELECT numcaps FROM blazecaps WHERE numcaps = ?';
 
         client.query(queryString, [capnum])
@@ -37,7 +36,7 @@ router.get('/capitulos/:id', (req, res) => {
         console.log(e);
     }
 
-    
+    res.render('/app/src/views/capitulos.html', { title: 'Capítulos'});
 });
 
 router.get('/galeria', (req, res) => {
