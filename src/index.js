@@ -24,7 +24,7 @@ app.listen(process.env.PORT || 5000, () => {
 
 
 
-app.get('routes/capitulos', (req, res) => {
+app.get('/capitulos', (req, res) => {
 
     //const capnum = req.params.id;
     
