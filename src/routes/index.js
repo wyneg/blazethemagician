@@ -8,8 +8,11 @@ router.get('/', (req, res) => {
     res.render('/app/src/views/index.html', { title: 'Bienvenido a Blaze!'});
 });
 
-router.get('/capitulos', (req, res) => {
+router.get('/capitulos/:id', (req, res) => {
     res.render('/app/src/views/capitulos.html', { title: 'Capítulos'});
+
+    const capnum = req.params.id;
+
     const { Client } = require('pg');
 
     const connection = {
@@ -24,9 +27,9 @@ router.get('/capitulos', (req, res) => {
 
     client.connect();
 
-    const queryString = 'SELECT numcaps FROM blazecaps';
+    const queryString = 'SELECT numcaps FROM blazecaps WHERE numcaps = ?';
 
-    client.query(queryString)
+    client.query(queryString, [capnum])
     .then(response => console.log(response.rows))
     .then(e => console.log(e));
 });
