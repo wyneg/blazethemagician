@@ -45,8 +45,8 @@ app.get('/capitulos', (req, res) => {
     const queryString = 'SELECT numcaps FROM blazecaps';
 
     client.query(queryString)
-    .then(res => {
-        console.log(res.rows);
+    .then(response => {
+        console.log(response.rows);
         client.end();
     })
     .catch(err => {
@@ -54,6 +54,7 @@ app.get('/capitulos', (req, res) => {
         console.log(err);
     });
         //return response.rows;
+        console.log(res.rows);
 });
 
 
