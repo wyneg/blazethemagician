@@ -42,7 +42,7 @@ router.get('/capitulos', (req, res) => {
 router.use(bodyParser.urlencoded({extended: true}));
 router.use(bodyParser.json());
 
-router.post('/caps', (req, res) => {
+router.post('/capitulos', (req, res) => {
 
     try{
         const cap = req.body.buttonCap;
