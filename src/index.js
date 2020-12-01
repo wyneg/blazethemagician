@@ -1,5 +1,6 @@
 require('dotenv').config();
 
+const { response } = require('express');
 const express = require('express');
 
 const app = express();
@@ -44,6 +45,7 @@ const caps = async () => {
         client.end();
         console.log(err);
     });
+    return response.rows;
 }
 
 app.get('/capitulos', async (req, res) => {
