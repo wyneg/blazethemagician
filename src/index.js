@@ -22,9 +22,9 @@ app.listen(process.env.PORT || 5000, () => {
 });
 
 
+const router = express.Router();
 
-
-app.get('/capitulos', (req, res) => {
+router.get('/capitulos', (req, res) => {
 
     //const capnum = req.params.id;
     
