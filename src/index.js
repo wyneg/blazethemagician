@@ -24,9 +24,9 @@ app.listen(process.env.PORT || 5000, () => {
 
 
 
-app.get('/capitulos/:id', (req, res) => {
+app.get('/capitulos', (req, res) => {
 
-    const capnum = req.params.id;
+    //const capnum = req.params.id;
     
     const { Client } = require('pg');
 
@@ -45,8 +45,8 @@ app.get('/capitulos/:id', (req, res) => {
     const queryString = 'SELECT numcaps FROM blazecaps';
 
     client.query(queryString)
-    .then(response => {
-        console.log(response.rows);
+    .then(res => {
+        console.log(res.rows);
         client.end();
     })
     .catch(err => {
