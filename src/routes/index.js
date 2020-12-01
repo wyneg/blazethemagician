@@ -4,15 +4,13 @@ const router = express.Router();
 
 const bodyParser = require('body-parser');
 
-router.use(bodyParser.urlencoded({extended: false}));
-
 console.log(__dirname);
 
 router.get('/', (req, res) => {
     res.render('/app/src/views/index.html', { title: 'Bienvenido a Blaze!'});
 });
 
-router.get('/capitulos/', (req, res) => {
+router.get('/capitulos', (req, res) => {
     res.render('/app/src/views/capitulos.html', { title: 'Capítulos'});
 
     /*try{
@@ -41,10 +39,14 @@ router.get('/capitulos/', (req, res) => {
     }*/
 });
 
-router.post('/capitulos/', (req, res) => {
+router.post('/capitulos', (req, res) => {
 
     try{
+        router.use(bodyParser.urlencoded({extended: false}));
+        
         const cap = req.body.buttonCap;
+
+        console.log("cap : " + cap);
 
         const { Client } = require('pg');
 
