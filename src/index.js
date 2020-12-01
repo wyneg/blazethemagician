@@ -42,7 +42,9 @@ app.get('/capitulos/:id', (req, res) => {
 
     client.connect();
 
-    client.query('SELECT numcaps FROM blazecaps WHERE numcaps = ?', [capnum])
+    const queryString = 'SELECT numcaps FROM blazecaps WHERE numcaps = ?';
+
+    client.query(queryString, [capnum])
     .then(response => {
         console.log(response.rows);
         client.end();
@@ -51,7 +53,7 @@ app.get('/capitulos/:id', (req, res) => {
         client.end();
         console.log(err);
     });
-        return response.rows;
+        //return response.rows;
 });
 
 
