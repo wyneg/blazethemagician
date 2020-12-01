@@ -39,14 +39,14 @@ router.get('/capitulos', (req, res) => {
     }*/
 });
 
+router.use(bodyParser.urlencoded({extended: true}));
+
 router.post('/capitulos', (req, res) => {
 
     try{
-        router.use(bodyParser.urlencoded({extended: false}));
-        
         const cap = req.body.buttonCap;
 
-        console.log("cap : " + cap);
+        console.log("BODY : " + req.body);
 
         const { Client } = require('pg');
 
