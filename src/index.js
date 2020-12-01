@@ -21,22 +21,28 @@ app.listen(process.env.PORT || 5000, () => {
     console.log('Server en puerto : ', process.env.PORT);
 });
 
-const { Client } = require('pg');
 
-const connection = {
-    user: process.env.DB_USER,
-    host: process.env.DB_HOST,
-    database: process.env.DB_DATABASE,
-    password: process.env.DB_PASSWORD,
-    port: process.env.DB_PORT,
-}
 
-const client = new Client(connection);
 
-client.connect();
+app.get('/capitulos/:id', (req, res) => {
 
-const caps = async () => {
-    await client.query('SELECT numcaps FROM blazecaps')
+    const capnum = req.params.id;
+    
+    const { Client } = require('pg');
+
+    const connection = {
+        user: process.env.DB_USER,
+        host: process.env.DB_HOST,
+        database: process.env.DB_DATABASE,
+        password: process.env.DB_PASSWORD,
+        port: process.env.DB_PORT,
+    }
+
+    const client = new Client(connection);
+
+    client.connect();
+
+    client.query('SELECT numcaps FROM blazecaps WHERE numcaps = ?', [capnum])
     .then(response => {
         console.log(response.rows);
         client.end();
@@ -45,12 +51,7 @@ const caps = async () => {
         client.end();
         console.log(err);
     });
-    return response.rows;
-}
-
-app.get('/capitulos', async (req, res) => {
-    const cap = await caps();
-    res.send(cap);
+        return response.rows;
 });
 
 
