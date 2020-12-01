@@ -2,16 +2,23 @@ const express = require('express');
 
 const router = express.Router();
 
+const bodyParser = require('body-parser');
+
+const app = express();
+
+app.use(bodyParser.urlencoded({extended: false}))
+
 console.log(__dirname);
 
 router.get('/', (req, res) => {
     res.render('/app/src/views/index.html', { title: 'Bienvenido a Blaze!'});
 });
 
-router.get('/capitulos/:id', (req, res) => {
+router.post('/capitulos/', (req, res) => {
     
     try{
-        const capnum = req.params.id;
+
+        console.log("numero" +req.body.name);
 
         const { Client } = require('pg');
 
@@ -29,7 +36,7 @@ router.get('/capitulos/:id', (req, res) => {
 
         const queryString = 'SELECT numcaps FROM blazecaps WHERE numcaps = ?';
 
-        client.query(queryString, [capnum])
+        client.query(queryString,)
         .then(response => console.log(response.rows))
         .then(e => console.log(e));
     } catch(e){
