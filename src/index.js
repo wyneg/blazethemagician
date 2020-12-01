@@ -26,6 +26,8 @@ const router = express.Router();
 
 router.get('/capitulos', (req, res) => {
 
+    res.render('/app/src/views/capitulos.html', { title: 'Capítulos'});
+    
     //const capnum = req.params.id;
     
     const { Client } = require('pg');
