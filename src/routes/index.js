@@ -8,9 +8,34 @@ router.get('/', (req, res) => {
     res.render('/app/src/views/index.html', { title: 'Bienvenido a Blaze!'});
 });
 
-/*router.get('/capitulos', (req, res) => {
+router.get('/capitulos', (req, res) => {
     res.render('/app/src/views/capitulos.html', { title: 'Capítulos'});
-});*/
+    
+    const { Client } = require('pg');
+
+    const connection = {
+        user: process.env.DB_USER,
+        host: process.env.DB_HOST,
+        database: process.env.DB_DATABASE,
+        password: process.env.DB_PASSWORD,
+        port: process.env.DB_PORT,
+    }
+
+    const client = new Client(connection);
+
+    client.connect();
+
+    const queryString = 'SELECT numcaps FROM blazecaps';
+
+    client.query(queryString, (err, rows) => {
+        if(err){
+            console.log("Falla" + err);
+            res.sendStatus(500);
+
+        }
+        res.json(rows);
+    });
+});
 
 router.get('/galeria', (req, res) => {
     res.render('/app/src/views/galeria.html', { title: 'Galería'});
