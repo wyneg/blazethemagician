@@ -42,9 +42,9 @@ app.get('/capitulos/:id', (req, res) => {
 
     client.connect();
 
-    const queryString = 'SELECT numcaps FROM blazecaps WHERE numcaps = ?';
+    const queryString = 'SELECT numcaps FROM blazecaps';
 
-    client.query(queryString, [capnum])
+    client.query(queryString)
     .then(response => {
         console.log(response.rows);
         client.end();
