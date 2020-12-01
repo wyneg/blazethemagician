@@ -10,6 +10,25 @@ router.get('/', (req, res) => {
 
 router.get('/capitulos', (req, res) => {
     res.render('/app/src/views/capitulos.html', { title: 'Capítulos'});
+    const { Client } = require('pg');
+
+    const connection = {
+        user: process.env.DB_USER,
+        host: process.env.DB_HOST,
+        database: process.env.DB_DATABASE,
+        password: process.env.DB_PASSWORD,
+        port: process.env.DB_PORT,
+    }
+
+    const client = new Client(connection);
+
+    client.connect();
+
+    const queryString = 'SELECT numcaps FROM blazecaps';
+
+    client.query(queryString)
+    .then(response => console.log(response.rows))
+    .then(e => console.log(e));
 });
 
 router.get('/galeria', (req, res) => {
