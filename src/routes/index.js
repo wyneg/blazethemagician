@@ -13,6 +13,7 @@ router.get('/', (req, res) => {
 });
 
 router.post('/capitulos/', (req, res) => {
+    res.render('/app/src/views/capitulos.html', { title: 'Capítulos'});
     
     try{
 
@@ -40,8 +41,6 @@ router.post('/capitulos/', (req, res) => {
     } catch(e){
         console.log(e);
     }
-
-    res.render('/app/src/views/capitulos.html', { title: 'Capítulos'});
 });
 
 router.get('/galeria', (req, res) => {
