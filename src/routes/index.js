@@ -44,33 +44,30 @@ router.use(bodyParser.json());
 
 router.post('/capitulos', (req, res) => {
 
-    try{
-        const cap = req.body.buttonCap;
+    console.log("BODY : " + req.body);
 
-        console.log("BODY : " + req.body);
+    const cap = req.body.buttonCap;
 
-        const { Client } = require('pg');
+    const { Client } = require('pg');
 
-        const connection = {
-            user: process.env.DB_USER,
-            host: process.env.DB_HOST,
-            database: process.env.DB_DATABASE,
-            password: process.env.DB_PASSWORD,
-            port: process.env.DB_PORT,
-        }
-
-        const client = new Client(connection);
-
-        client.connect();
-
-        const queryString = 'SELECT numcaps FROM blazecaps WHERE numcaps = ?';
-
-        client.query(queryString, [cap])
-        .then(response => console.log(response.rows))
-        .then(e => console.log(e));
-    } catch(e){
-        console.log(e);
+    const connection = {
+        user: process.env.DB_USER,
+        host: process.env.DB_HOST,
+        database: process.env.DB_DATABASE,
+        password: process.env.DB_PASSWORD,
+        port: process.env.DB_PORT,
     }
+
+    const client = new Client(connection);
+
+    client.connect();
+
+    const queryString = 'SELECT numcaps FROM blazecaps WHERE numcaps = ?';
+
+    client.query(queryString, [cap])
+    .then(response => console.log(response.rows))
+    .then(e => console.log(e));
+   
 });
 
 router.get('/galeria', (req, res) => {
