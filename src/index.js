@@ -34,12 +34,22 @@ const client = new Client(connection);
 
 client.connect();
 
-client.query('SELECT numcaps FROM blazecaps')
-.then(response => {
-    console.log(response.rows);
-    client.end();
-})
-.catch(err => {
-    client.end();
-    console.log(err);
+const caps = async () => {
+    await client.query('SELECT numcaps FROM blazecaps')
+    .then(response => {
+        console.log(response.rows);
+        client.end();
+    })
+    .catch(err => {
+        client.end();
+        console.log(err);
+    });
+}
+
+app.get('/capitulos', async (req, res) => {
+    const cap = await caps();
+    res.send(cap);
 });
+
+
+
