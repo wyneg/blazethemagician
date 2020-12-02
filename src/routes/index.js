@@ -66,7 +66,7 @@ router.post('/capitulos', function (req, res) {
 
     client.query(queryString, [cap])
     .then(response => console.log(response.rows))
-    .then(e => console.log(e)).then(client.end());
+    .catch(e => console.log(e)).then(() => client.end());
 });
 
 router.get('/galeria', (req, res) => {
