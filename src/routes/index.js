@@ -46,7 +46,7 @@ router.post('/capitulos', function (req, res) {
 
     console.log("BODY : " + req.body.buttonCap);
 
-    /*const cap = req.body.buttonCap;
+    const cap = req.body.buttonCap;
 
     const { Client } = require('pg');
 
@@ -66,8 +66,9 @@ router.post('/capitulos', function (req, res) {
 
     client.query(queryString, [cap])
     .then(response => console.log(response.rows))
-    .then(e => console.log(e));*/
-   
+    .then(e => console.log(e));
+
+    client.end();
 });
 
 router.get('/galeria', (req, res) => {
