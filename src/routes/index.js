@@ -62,7 +62,7 @@ router.post('/capitulos', function (req, res) {
 
     client.connect();
 
-    const queryString = 'SELECT numcaps FROM blazecaps WHERE numcaps = ?';
+    const queryString = 'SELECT numcaps FROM blazecaps WHERE numcaps = $1';
 
     client.query(queryString, [cap])
     .then(response => console.log(response.rows))
