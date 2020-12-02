@@ -12,10 +12,10 @@ router.get('/', (req, res) => {
     res.render('/app/src/views/index.html', { title: 'Bienvenido a Blaze!'});
 });
 
-/*router.get('/capitulos', (req, res) => {
+router.get('/capitulos', (req, res) => {
     res.render('/app/src/views/capitulos.html', { title: 'Capítulos'});
 
-    try{
+    /*try{
 
         const { Client } = require('pg');
 
@@ -38,10 +38,10 @@ router.get('/', (req, res) => {
         .then(e => console.log(e));
     } catch(e){
         console.log(e);
-    }
-});*/
+    }*/
+});
 
-router.post('/capitulos', (req, res) => {
+router.post('/capitulos', function (req, res) {
     res.render('/app/src/views/capitulos.html', { title: 'Capítulos'});
 
     console.log("BODY : " + req.body.buttonCap);
