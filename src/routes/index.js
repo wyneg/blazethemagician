@@ -42,7 +42,7 @@ router.get('/capitulos', (req, res) => {
 });
 
 router.post('/capitulos', function (req, res) {
-    res.render('/app/src/views/capitulos.html', { title: 'Capítulos'});
+    //res.render('/app/src/views/capitulos.html', { title: 'Capítulos'});
 
     console.log("BODY : " + req.body.buttonCap);
 
