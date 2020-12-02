@@ -4,6 +4,10 @@ const router = express.Router();
 
 const bodyParser = require('body-parser');
 
+router.use(bodyParser.urlencoded({extended: true}));
+
+router.use(bodyParser.json());
+
 console.log(__dirname);
 
 router.get('/', (req, res) => {
@@ -38,9 +42,6 @@ router.get('/capitulos', (req, res) => {
         console.log(e);
     }*/
 });
-
-router.use(bodyParser.urlencoded({extended: true}));
-router.use(bodyParser.json());
 
 router.post('/capitulos', (req, res) => {
 
