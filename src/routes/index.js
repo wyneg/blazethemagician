@@ -67,12 +67,10 @@ router.post('/capitulos', (req, res) => {
 
     var capitulo;
     client.query(queryString, [cap])
-    .then(response => { capitulo = response.rows; console.log('capitulo dentro promesa : ' + capitulo); })
+    .then(response => { console.log(response.rows); capitulo = response.rows; console.log('capitulo dentro promesa : ' + capitulo); })
     .catch(e => console.log(e));
 
     console.log('capitulo fuera promesa : ' + capitulo);
-
-    req.body.capis.write('<p>desde aqui se puede acceder</p>');
 
     res.end();
 });
