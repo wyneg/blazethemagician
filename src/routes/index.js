@@ -5,7 +5,7 @@ const router = express.Router();
 
 router.use(express.urlencoded({extended: true}));
 
-router.use(express.json());
+router.use(express.text());
 
 console.log(__dirname);
 
