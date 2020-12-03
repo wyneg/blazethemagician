@@ -75,7 +75,7 @@ router.post('/capitulos', async function (req, res) {
 
     console.log(capitulo);
 
-    res.send(capitulo);
+    res.json(capitulo);
 });
 
 router.get('/galeria', (req, res) => {
