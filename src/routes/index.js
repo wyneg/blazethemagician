@@ -72,7 +72,7 @@ router.post('/capitulos', (req, res) => {
 
     console.log('capitulo : ' + capitulo);
 
-    res.json(capitulo.rows[0]);
+    res.json(capitulo.rows);
 });
 
 router.get('/galeria', (req, res) => {
