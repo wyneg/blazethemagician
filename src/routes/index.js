@@ -73,6 +73,8 @@ router.post('/capitulos', function (req, res) {
     client.query(queryString, [cap])
     .then(response => console.log(response.rows))
     .catch(e => console.log(e)).then(() => client.end());
+
+    res.send('Ok');
 });
 
 router.get('/galeria', (req, res) => {
