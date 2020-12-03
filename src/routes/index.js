@@ -71,7 +71,7 @@ router.post('/capitulos', function (req, res) {
 
     const queryString = 'SELECT txtcaps FROM blazecaps WHERE numcaps = $1';
 
-    const capitulo = "";
+    var capitulo = "";
 
     client.query(queryString, [cap])
     .then(response => { capitulo = response.rows; })
