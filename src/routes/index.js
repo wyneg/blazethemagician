@@ -74,12 +74,12 @@ router.post('/capitulos', function (req, res) {
     var capitulo = "";
 
     client.query(queryString, [cap])
-    .then(response => console.log(response.rows))
+    .then(response => {capitulo = response.rows;})
     .catch(e => console.log(e)).then(() => client.end());
 
     //req.body.capis = response.rows;
 
-    //console.log('capitulo :' +capitulo);
+    console.log('capitulo : ' + capitulo);
 
     //res.send(capitulo);
 });
