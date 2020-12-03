@@ -65,7 +65,7 @@ router.post('/capitulos', (req, res) => {
 
     const queryString = 'SELECT txtcaps FROM blazecaps WHERE numcaps = $1';
 
-    var capitulo = '';
+    var capitulo;
     client.query(queryString, [cap])
     .then(response => { capitulo = response.rows; })
     .catch(e => console.log(e));
@@ -74,7 +74,7 @@ router.post('/capitulos', (req, res) => {
 
     console.log('capitulo : ' + capitulo);
 
-    res.json(capitulo.rows);
+    res.end();
 });
 
 router.get('/galeria', (req, res) => {
