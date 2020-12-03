@@ -5,7 +5,7 @@ const router = express.Router();
 
 router.use(express.urlencoded());
 
-router.use(express.text());
+router.use(express.json());
 
 console.log(__dirname);
 
@@ -74,7 +74,7 @@ router.post('/capitulos', function (req, res) {
     var capitulo = "";
 
     client.query(queryString, [cap])
-    .then(response => { console.log('respuesta: \n' + response.rows.toString()); capitulo = response.rows; })
+    .then(response => { console.log('respuesta: \n' + response.rows); capitulo = response.rows; })
     .catch(e => console.log(e)).then(() => client.end());
 
     //req.body.capis = response.rows;
