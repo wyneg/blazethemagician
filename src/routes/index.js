@@ -1,3 +1,4 @@
+const { response } = require('express');
 const express = require('express');
 
 const router = express.Router();
@@ -68,13 +69,15 @@ router.post('/capitulos', function (req, res) {
 
     client.connect();
 
-    const queryString = 'SELECT numcaps FROM blazecaps WHERE numcaps = $1';
+    const queryString = 'SELECT txtcaps FROM blazecaps WHERE numcaps = $1';
 
     client.query(queryString, [cap])
     .then(response => console.log(response.rows))
     .catch(e => console.log(e)).then(() => client.end());
 
-    res.send('Ok');
+    document.getElementById('capis').innerHTML = response.rows;
+
+    res.send(console.log('ok'));
 });
 
 router.get('/galeria', (req, res) => {
