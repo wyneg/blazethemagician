@@ -74,7 +74,7 @@ router.post('/capitulos', function (req, res) {
     const capitulo = "";
 
     client.query(queryString, [cap])
-    .then(function (response) { capitulo = response.rows; })
+    .then(response => { capitulo = response.rows; })
     .catch(e => console.log(e)).then(() => client.end());
 
     //req.body.capis = response.rows;
