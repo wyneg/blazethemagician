@@ -74,6 +74,9 @@ router.post('/capitulos', (req, res) => {
 
     console.log('capitulo : ' + capitulo);
 
+    res.write('<head>');
+    res.write('<link rel="stylesheet" type="text/css" href="css/caps.css?v=2.0"/>');
+    res.write('</head>');
     res.write('<div class="modal fade bd-example-modal-lg" id="mod1" tabindex="-1" role="dialog" aria-hidden="true">');
     res.write('<div class="modal-dialog modal-lg" role="document" id="cap1">');
     res.write('<div class="modal-content" id="contenido">');
