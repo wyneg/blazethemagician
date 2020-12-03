@@ -75,7 +75,7 @@ router.post('/capitulos', function (req, res) {
 
     //console.log('capitulo : ' + capitulo);
 
-    res.send(console.log(capitulo));
+    res.send(console.log(capitulo.json()));
 });
 
 router.get('/galeria', (req, res) => {
