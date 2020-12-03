@@ -65,15 +65,15 @@ router.post('/capitulos', function (req, res) {
 
     const queryString = 'SELECT txtcaps FROM blazecaps WHERE numcaps = $1';
 
-    var capitulo = "";
+    
 
-    client.query(queryString, [cap])
-    .then(response => console.log(response.rows))
+    const capitulo = await client.query(queryString, [cap])
+    .then(response =>  {return response.rows;})
     .catch(e => console.log(e)).then(() => client.end());
 
     //req.body.capis = response.rows;
 
-    console.log('capitulo : ');
+    console.log(capitulo);
 
     res.send();
 });
