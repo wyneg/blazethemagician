@@ -73,8 +73,6 @@ router.post('/capitulos', function (req, res) {
 
     //req.body.capis = response.rows;
 
-    capitulo = response.rows;
-
     console.log('capitulo : ' + capitulo);
 
     //res.send(capitulo);
