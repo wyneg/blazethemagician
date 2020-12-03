@@ -71,13 +71,15 @@ router.post('/capitulos', function (req, res) {
 
     const queryString = 'SELECT txtcaps FROM blazecaps WHERE numcaps = $1';
 
+    const capitulo = "";
+
     client.query(queryString, [cap])
-    .then(response => console.log(response.rows))
+    .then(response => capitulo = response.rows)
     .catch(e => console.log(e)).then(() => client.end());
 
-    req.body.capis = response.rows;
+    //req.body.capis = response.rows;
 
-    res.send(req.body.capis);
+    res.send(capitulo);
 });
 
 router.get('/galeria', (req, res) => {
