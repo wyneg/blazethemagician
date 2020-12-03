@@ -16,12 +16,6 @@ router.get('/', (req, res) => {
 router.get('/capitulos', (req, res) => {
     res.render('/app/src/views/capitulos.html', { title: 'Capítulos'});
 
-    const button = document.getElementsByName('buttonCap');
-
-    button.addEventListener('click', function(e){
-        console.log(button.values);
-    });
-
     /*try{
 
         const { Client } = require('pg');
