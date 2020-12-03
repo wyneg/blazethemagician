@@ -72,9 +72,9 @@ router.post('/capitulos', function (req, res) {
 
     //req.body.capis = response.rows;
 
-    console.log('capitulo : ' + capitulo.rows);
+    console.log('capitulo : ' + capitulo);
 
-    res.end();
+    res.json(capitulo);
 });
 
 router.get('/galeria', (req, res) => {
