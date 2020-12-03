@@ -73,7 +73,7 @@ router.post('/capitulos', function (req, res) {
 
     //req.body.capis = response.rows;
 
-    console.log('capitulo : ' + Promise.all(capitulo));
+    console.log('capitulo : ' + Promise.resolve(capitulo));
 
     res.end();
 });
