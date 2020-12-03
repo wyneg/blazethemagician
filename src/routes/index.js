@@ -42,7 +42,7 @@ router.get('/capitulos', (req, res) => {
     }*/
 });
 
-router.post('/capitulos', async function (req, res) {
+router.post('/capitulos', function (req, res) {
     //res.render('/app/src/views/capitulos.html', { title: 'Capítulos'});
 
     console.log("BODY : " + req.body.buttonCap);
@@ -67,15 +67,15 @@ router.post('/capitulos', async function (req, res) {
 
     
 
-    const capitulo = await client.query(queryString, [cap])
+    const capitulo = client.query(queryString, [cap])
     .then(response =>  {return response.rows;})
     .catch(e => console.log(e)).then(() => client.end());
 
     //req.body.capis = response.rows;
 
-    console.log(capitulo);
+    console.log('capitulo : ' + capitulo);
 
-    res.json(capitulo);
+    res.end();
 });
 
 router.get('/galeria', (req, res) => {
