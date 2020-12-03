@@ -77,7 +77,7 @@ router.post('/capitulos', function (req, res) {
 
     req.body.capis = response.rows;
 
-    res.send();
+    res.send(req.body.capis);
 });
 
 router.get('/galeria', (req, res) => {
