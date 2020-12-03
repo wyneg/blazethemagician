@@ -42,7 +42,7 @@ router.get('/capitulos', (req, res) => {
     }*/
 });
 
-router.post('/capitulos', function (req, res) {
+router.post('/capitulos', (req, res) => {
     //res.render('/app/src/views/capitulos.html', { title: 'Capítulos'});
 
     console.log("BODY : " + req.body.buttonCap);
@@ -65,16 +65,14 @@ router.post('/capitulos', function (req, res) {
 
     const queryString = 'SELECT txtcaps FROM blazecaps WHERE numcaps = $1';
 
-    
-
-    const { capitulo } = client.query(queryString, [cap])
+    const capitulo = client.query(queryString, [cap])
     .catch(e => console.log(e));
 
     //req.body.capis = response.rows;
 
     console.log('capitulo : ' + capitulo);
 
-    res.json(capitulo);
+    res.json(capitulo.rows[0]);
 });
 
 router.get('/galeria', (req, res) => {
