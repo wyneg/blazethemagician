@@ -237,9 +237,9 @@
                 console.log('value : ' + data);
             });*/
 
-            fetch('./caps.json')
+            fetch('/app/src/caps.json')
             .then(response => {
-                return response.json();
+                return console.log(response);
             })
             .then(data => {
                 console.log(data);
