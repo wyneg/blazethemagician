@@ -228,10 +228,9 @@
     <script>
         function fetchgo(){
             var data;
-            var botones = document.getElementsByName('buttonCap');
 
-            botones.addEventListener('click', function() {
-                data = botones.attr('value');
+            document.getElementsByName('buttonCap').addEventListener('click', function() {
+                data = $(this).attr('value');
                 console.log('value : ' + data);
             });
 
