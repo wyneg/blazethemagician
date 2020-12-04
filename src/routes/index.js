@@ -44,7 +44,7 @@ router.get('/capitulos', (req, res) => {
 
 router.post('/capitulos', (req, res) => {
 
-    console.log("BODY : " + req.body);
+    /*console.log("BODY : " + req.body);
 
     const cap = req.body;
 
@@ -72,7 +72,7 @@ router.post('/capitulos', (req, res) => {
 
     
 
-    //res.end();
+    //res.end();*/
 });
 
 router.get('/galeria', (req, res) => {
