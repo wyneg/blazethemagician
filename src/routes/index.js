@@ -67,8 +67,7 @@ router.post('/capitulos', (req, res) => {
 
     client.query(queryString, [cap])
     .then(response => { 
-        console.log(response.rows); 
-        res.send(response.rows);
+        res.send('/capitulos', response.rows);
     
     })
     .catch(e => console.log(e));
