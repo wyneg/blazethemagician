@@ -232,10 +232,7 @@
 
             fetch('/capitulos', {
                 method: 'post',
-                body: data,
-                headers: {
-                    'Content-Type': 'text/plain'
-                }
+                body: data
             })
             .then(function (response) {
                 return response.text();
