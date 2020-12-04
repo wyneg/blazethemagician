@@ -65,14 +65,17 @@ router.post('/capitulos', (req, res) => {
 
     const queryString = 'SELECT txtcaps FROM blazecaps WHERE numcaps = $1';
 
-    var capitulo;
     client.query(queryString, [cap])
-    .then(response => { console.log(response.rows); capitulo = response.rows; console.log('capitulo dentro promesa : ' + capitulo); })
+    .then(response => { 
+        console.log(response.rows); 
+        res.send(response.rows);
+    
+    })
     .catch(e => console.log(e));
 
-    console.log('capitulo fuera promesa : ' + capitulo);
+    
 
-    res.end();
+    //res.end();
 });
 
 router.get('/galeria', (req, res) => {
