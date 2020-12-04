@@ -80,8 +80,8 @@
         </div>
         
              <div class="panel-collapse collapse" id="collapse1">"
-                 <form onsubmit="return fetchgo()" method="POST">
-                    <button type="submit" name="buttonCap" value="1" class="list-group-item list-group-item-action list-group-item-dark text-danger mod" data-toggle="modal" data-target="#mod1" id="modal101" onClick="pergamino(1);">Cap&iacute;tulo 1<img id="perg101" src="images/pergaminosinquemar.gif" alt="pergamino" /></button>
+                 <form method="POST">
+                    <button type="submit" name="buttonCap" value="1" class="list-group-item list-group-item-action list-group-item-dark text-danger mod" data-toggle="modal" data-target="#mod1" id="modal101" onClick="fetchgo(1); pergamino(1);">Cap&iacute;tulo 1<img id="perg101" src="images/pergaminosinquemar.gif" alt="pergamino" /></button>
                     <button type="submit" name="buttonCap" value="2" class="list-group-item list-group-item-action list-group-item-dark text-danger mod" data-toggle="modal" data-target="#mod1" id="modal200" onClick="pergamino(2);">Cap&iacute;tulo 2<img id="perg200" src="images/pergaminosinquemar.gif" alt="pergamino" /></button>
                  </form>
                 
@@ -226,8 +226,8 @@
     <script src="js/hechizos.js?v=2.0"></script>
     <script src="js/caps.js?v=2.0"></script>
     <script>
-        function fetchgo(){
-            var data;
+        function fetchgo(num){
+            var data = num
 
             /*var botones = document.getElementsByName('buttonCap');
             
@@ -236,12 +236,12 @@
                     data = boton.getAttribute('value');
                     console.log('value : ' + data);
                 });
-            });*/
+            });
 
             $('.list-group-item').on('click', function () {
                 data = document.getElementById(this.id).value;
                 console.log('value : ' + data);
-            });
+            });*/
 
             fetch('/capitulos', {
                 method: 'post',
