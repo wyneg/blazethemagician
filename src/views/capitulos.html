@@ -227,7 +227,12 @@
     <script src="js/caps.js?v=2.0"></script>
     <script>
         function fetchgo(){
-            let data = document.getElementsByName('buttonCap')[0].value;
+            let data;
+            $('.list-group-item').on('click', function() {
+                data = document.getElementById(this.id).value;
+            });
+
+            //let data = document.getElementsByName('buttonCap')[0].value;
             //data.append('name', document.getElementsByName('buttonCap').values);
 
             fetch('/capitulos', {
