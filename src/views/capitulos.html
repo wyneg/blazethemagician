@@ -229,7 +229,7 @@
         function fetchgo(){
             let data;
             $('.list-group-item').click(function() {
-                data = $(this).attr('value');
+                data = $(this).attr('value').toString();
                 console.log('value : ' + data);
             });
 
