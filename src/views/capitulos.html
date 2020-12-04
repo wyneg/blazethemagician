@@ -228,8 +228,9 @@
     <script>
         function fetchgo(){
             let data;
-            $('.list-group-item').on('click', function() {
+            $('.list-group-item').click(function() {
                 data = document.getElementById(this.id).value;
+                console.log('id? ' + data);
             });
 
             //let data = document.getElementsByName('buttonCap')[0].value;
