@@ -229,17 +229,16 @@
         function fetchgo(){
             let data;
             $('.list-group-item').click(function() {
-                //data = document.getElementById(this.id).value;
                 data = $(this).attr('value');
                 console.log('value : ' + data);
             });
 
-            //let data = document.getElementsByName('buttonCap')[0].value;
-            //data.append('name', document.getElementsByName('buttonCap').values);
-
             fetch('/capitulos', {
                 method: 'post',
-                body: data
+                body: data,
+                headers: {
+                    "Content-Type": "text/plain"
+                }
             })
             .then(function (response) {
                 return response.text();
