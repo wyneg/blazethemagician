@@ -47,7 +47,7 @@ router.post('/capitulos', (req, res) => {
 
     console.log("BODY : " + req.body.buttonCap);
     let data = new URLSearchParams();
-    console.log("FETCH : " + data.entries.toString());
+    console.log("FETCH : " + data.get('name'));
 
     const cap = req.body.buttonCap;
 
