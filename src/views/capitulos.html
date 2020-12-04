@@ -229,10 +229,16 @@
         function fetchgo(){
             var data;
 
-            document.getElementsByName('buttonCap').addEventListener('click', function() {
-                data = $(this).attr('value');
-                console.log('value : ' + data);
+            var botones = document.getElementsByName('buttonCap');
+            
+            botones.forEach((boton) => {
+                boton.addEventListener('click', function() {
+                    data = $(this).attr('value');
+                    console.log('value : ' + data);
+                });
             });
+            
+            
 
             /*$('.list-group-item').click(function() {
                 data = $(this).attr('value');
