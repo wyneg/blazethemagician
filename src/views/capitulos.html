@@ -80,8 +80,7 @@
         </div>
         
              <div class="panel-collapse collapse" id="collapse1">"
-                 <form action="/capitulos" method="POST">
-                     <!--<input type="hidden" name="buttonCap" value="1">-->
+                 <form onsubmit="return fetchgo()" method="POST">
                     <button type="submit" name="buttonCap" value="1" class="list-group-item list-group-item-action list-group-item-dark text-danger mod" data-toggle="modal" data-target="#mod1" id="modal101" onClick="pergamino(1);">Cap&iacute;tulo 1<img id="perg101" src="images/pergaminosinquemar.gif" alt="pergamino" /></button>
                     <button type="submit" name="buttonCap" value="2" class="list-group-item list-group-item-action list-group-item-dark text-danger mod" data-toggle="modal" data-target="#mod1" id="modal200" onClick="pergamino(2);">Cap&iacute;tulo 2<img id="perg200" src="images/pergaminosinquemar.gif" alt="pergamino" /></button>
                  </form>
@@ -226,5 +225,27 @@
     <script src="js/navbar.js?v=2.0"></script>
     <script src="js/hechizos.js?v=2.0"></script>
     <script src="js/caps.js?v=2.0"></script>
+    <script>
+        function fetchgo(){
+            let data = new URLSearchParams();
+            data.append('name', document.getElementsByName('buttonCap').values);
+
+            fetch('/capitulos', {
+                method: 'post',
+                body: data
+            })
+            .then(function (response) {
+                return response.text();
+            })
+            .then(function (text) {
+                console.log(text);
+            })
+            .catch(function (error) {
+                console.log(error);
+            });
+
+            return false;
+        }
+    </script>
 </body>
 </html>
