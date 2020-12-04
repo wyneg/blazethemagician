@@ -80,11 +80,6 @@
         </div>
         
              <div class="panel-collapse collapse" id="collapse1">"
-                 <!--<form method="POST">
-                    <button type="submit" class="list-group-item list-group-item-action list-group-item-dark text-danger mod" data-toggle="modal" data-target="#mod1" id="modal101" onClick="fetchgo(); pergamino(1);">Cap&iacute;tulo 1<img id="perg101" src="images/pergaminosinquemar.gif" alt="pergamino" /></button>
-                    <button type="submit" class="list-group-item list-group-item-action list-group-item-dark text-danger mod" data-toggle="modal" data-target="#mod1" id="modal200" onClick="pergamino(2);">Cap&iacute;tulo 2<img id="perg200" src="images/pergaminosinquemar.gif" alt="pergamino" /></button>
-                 </form>-->
-                
                 <a class="list-group-item list-group-item-action list-group-item-dark text-danger mod" data-toggle="modal" data-target="#mod1" id="modal1" onClick="fetchgo(); pergamino(1);">Cap&iacute;tulo 1<img id="perg1" src="images/pergaminosinquemar.gif" alt="pergamino" /></a>
                 <a class="list-group-item list-group-item-action list-group-item-dark text-danger mod" data-toggle="modal" data-target="#mod1" id="modal2" onClick="showCap(2); pergamino(2);">Cap&iacute;tulo 2<img id="perg2" src="images/pergaminosinquemar.gif" alt="pergamino" /></a>
                 <a class="list-group-item list-group-item-action list-group-item-dark text-danger mod" data-toggle="modal" data-target="#mod1" id="modal3" onClick="showCap(3); pergamino(3);">Cap&iacute;tulo 3<img id="perg3" src="images/pergaminosinquemar.gif" alt="pergamino" /></a> 
@@ -244,7 +239,7 @@
 
             fetch('./caps.json')
             .then(response => {
-                return JSON.parse(response);
+                return response.json();
             })
             .then(data => {
                 console.log(data);
