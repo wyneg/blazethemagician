@@ -45,9 +45,7 @@ router.get('/capitulos', (req, res) => {
 router.post('/capitulos', (req, res) => {
     //res.render('/app/src/views/capitulos.html', { title: 'Capítulos'});
 
-    console.log("BODY : " + req.body.buttonCap);
-    let data = new URLSearchParams();
-    console.log("FETCH : " + data.get('name'));
+    console.log("BODY : " + req.body);
 
     const cap = req.body.buttonCap;
 
