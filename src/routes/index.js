@@ -47,7 +47,7 @@ router.post('/capitulos', (req, res) => {
 
     console.log("BODY : " + req.body);
 
-    const cap = req.body.buttonCap;
+    const cap = req.body;
 
     const { Client } = require('pg');
 
