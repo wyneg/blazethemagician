@@ -229,13 +229,18 @@
         function fetchgo(){
             var data;
 
-            var botones = document.getElementsByName('buttonCap');
+            /*var botones = document.getElementsByName('buttonCap');
             
             botones.forEach((boton) => {
                 boton.addEventListener('click', function() {
                     data = boton.getAttribute('value');
                     console.log('value : ' + data);
                 });
+            });*/
+
+            $('button').on('click', function () {
+                data = $(this).getAttribute('value');
+                console.log('value : ' + data);
             });
 
             fetch('/capitulos', {
