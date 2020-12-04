@@ -242,18 +242,15 @@
                 console.log('value : ' + data);
             });*/
 
-            fetch('/capitulos', {
-                method: 'post',
-                body: num
+            fetch('./caps.json')
+            .then(response => {
+                return response.json();
             })
-            .then(function (response) {
-                return response.text();
+            .then(data => {
+                console.log(data);
+                document.getElementById('capis').innerHTML = data;
             })
-            .then(function (text) {
-                console.log(text);
-                document.getElementById('capis').innerHTML = text;
-            })
-            .catch(function (error) {
+            .catch(error => {
                 console.log(error);
             });
 
