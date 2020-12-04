@@ -233,7 +233,7 @@
             
             botones.forEach((boton) => {
                 boton.addEventListener('click', function() {
-                    data = boton.getElementById(this.id).attr('value');
+                    data = boton.getAttribute('value');
                     console.log('value : ' + data);
                 });
             });
