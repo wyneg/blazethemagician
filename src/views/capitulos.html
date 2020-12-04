@@ -239,7 +239,7 @@
             });*/
 
             $('.list-group-item').on('click', function () {
-                $(this).attr('value');
+                data = document.getElementById(this.id).value;
                 console.log('value : ' + data);
             });
 
