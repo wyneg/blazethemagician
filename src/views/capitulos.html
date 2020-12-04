@@ -237,26 +237,17 @@
                     console.log('value : ' + data);
                 });
             });
-            
-            
-
-            /*$('.list-group-item').click(function() {
-                data = $(this).attr('value');
-                console.log('value : ' + data);
-            });*/
 
             fetch('/capitulos', {
                 method: 'post',
-                body: data/*,
-                headers: {
-                    "Content-Type": "text/plain"
-                }*/
+                body: data
             })
             .then(function (response) {
                 return response.text();
             })
             .then(function (text) {
                 console.log(text);
+                document.getElementById('capis').innerHTML = text;
             })
             .catch(function (error) {
                 console.log(error);
