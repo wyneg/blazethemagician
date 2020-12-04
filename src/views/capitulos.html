@@ -227,18 +227,25 @@
     <script src="js/caps.js?v=2.0"></script>
     <script>
         function fetchgo(){
-            let data;
-            $('.list-group-item').click(function() {
-                data = $(this).attr('value').toString();
+            var data;
+            var botones = document.getElementsByName('buttonCap');
+
+            botones.addEventListener('click', function() {
+                data = botones.attr('value');
                 console.log('value : ' + data);
             });
 
+            /*$('.list-group-item').click(function() {
+                data = $(this).attr('value');
+                console.log('value : ' + data);
+            });*/
+
             fetch('/capitulos', {
                 method: 'post',
-                body: data,
+                body: data/*,
                 headers: {
                     "Content-Type": "text/plain"
-                }
+                }*/
             })
             .then(function (response) {
                 return response.text();
