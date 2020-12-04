@@ -227,12 +227,12 @@
     <script src="js/caps.js?v=2.0"></script>
     <script>
         function fetchgo(){
-            let data = new URLSearchParams();
-            data.append('name', document.getElementsByName('buttonCap').values);
+            //let data = new URLSearchParams();
+            //data.append('name', document.getElementsByName('buttonCap').values);
 
             fetch('/capitulos', {
                 method: 'post',
-                body: data
+                //body: data
             })
             .then(function (response) {
                 return response.text();
