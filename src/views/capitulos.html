@@ -230,7 +230,8 @@
             let data;
             $('.list-group-item').click(function() {
                 //data = document.getElementById(this.id).value;
-                console.log('value? ' + this.value);
+                let value = $(this).attr('value');
+                console.log('value? ' + value);
             });
 
             //let data = document.getElementsByName('buttonCap')[0].value;
