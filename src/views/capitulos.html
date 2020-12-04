@@ -227,7 +227,7 @@
     <script src="js/caps.js?v=2.0"></script>
     <script>
         function fetchgo(){
-            let data = document.getElementsByName('buttonCap').values;
+            let data = document.getElementsByName('buttonCap')[0].value;
             //data.append('name', document.getElementsByName('buttonCap').values);
 
             fetch('/capitulos', {
