@@ -241,14 +241,14 @@
                 method: 'get'
             })
             .then(response => {
-                response.text();
-                console.log(response.text());
+                response.json();
+                console.log(response.json());
                 //response.text();
                 //document.getElementById('capis').innerHTML = response.text();
             })
-            .then(text => {
-                console.log(text);
-                document.getElementById('capis').innerHTML = text;
+            .then(json => {
+                console.log(json);
+                document.getElementById('capis').innerHTML = json;
             })
             .catch(error => {
                 console.log('error : ' + error);
