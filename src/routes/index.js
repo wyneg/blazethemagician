@@ -53,7 +53,7 @@ router.get('/capitulos/:id', (req, res) => {
             res.write('</div>');
             res.write('</div>');
             res.write('</div>');
-            res.write('</div>');*/
+            res.write('</div>');
             res.send('<div class="modal fade bd-example-modal-lg" id="mod1" tabindex="-1" role="dialog" aria-hidden="false">'+
             '<div class="modal-dialog modal-lg" role="document" id="cap1">'+
             '<div class="modal-content" id="contenido">'+
@@ -66,7 +66,8 @@ router.get('/capitulos/:id', (req, res) => {
             '</div>'+
             '</div>'+
             '</div>'+
-            '</div>');
+            '</div>');*/
+            res.send(response.rows);
         })
         .then(e => console.log(e));
     } catch(e){
