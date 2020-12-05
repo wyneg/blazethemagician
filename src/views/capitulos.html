@@ -241,14 +241,14 @@
                 method: 'get'
             })
             .then(response => {
-                return console.log(response);
+                return console.log('respuesta : ' + response);
             })
             .then(data => {
                 //data.json();
                 document.getElementById('capis').innerHTML = data;
             })
             .catch(error => {
-                console.log(error);
+                console.log('error : ' + error);
             });
         }
     </script>
