@@ -40,36 +40,7 @@ router.get('/capitulos/:id', (req, res) => {
         const queryString = 'SELECT numcaps FROM blazecaps WHERE numcaps = $1';
 
         client.query(queryString, [cap])
-        .then(response => {
-            /*res.write('<div class="modal fade bd-example-modal-lg" id="mod1" tabindex="-1" role="dialog" aria-hidden="false">');
-            res.write('<div class="modal-dialog modal-lg" role="document" id="cap1">');
-            res.write('<div class="modal-content" id="contenido">');
-            res.write('<div class="modal-header" id="caeza">');
-            res.write('<button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="false">&times;</span></button>');
-            res.write('</div>');
-            res.write('<div class="modal-body" id="capis">'+ response.rows +'</div>');
-            res.write('<div class="modal-footer" id="pata">');
-            res.write('</div>');
-            res.write('</div>');
-            res.write('</div>');
-            res.write('</div>');
-            res.write('</div>');
-            res.send('<div class="modal fade bd-example-modal-lg" id="mod1" tabindex="-1" role="dialog" aria-hidden="false">'+
-            '<div class="modal-dialog modal-lg" role="document" id="cap1">'+
-            '<div class="modal-content" id="contenido">'+
-            '<div class="modal-header" id="caeza">'+
-            '<button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="false">&times;</span></button>'+
-            '</div>'+
-            '<div class="modal-body" id="capis">'+ response.rows +'</div>'+
-            '<div class="modal-footer" id="pata">'+
-            '</div>'+
-            '</div>'+
-            '</div>'+
-            '</div>'+
-            '</div>');*/
-            console.log(response.rows);
-            res.send(response.rows);
-        })
+        .then(response => res.send(response.rows))
         .then(e => console.log(e));
     } catch(e){
         console.log(e);
