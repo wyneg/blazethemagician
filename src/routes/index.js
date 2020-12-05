@@ -41,11 +41,11 @@ router.get('/capitulos/:id', (req, res) => {
 
         client.query(queryString, [cap])
         .then(response => {
-            res.write('<div class="modal fade bd-example-modal-lg" id="mod1" tabindex="-1" role="dialog" aria-hidden="true">');
+            res.write('<div class="modal fade bd-example-modal-lg" id="mod1" tabindex="-1" role="dialog" aria-hidden="false">');
             res.write('<div class="modal-dialog modal-lg" role="document" id="cap1">');
             res.write('<div class="modal-content" id="contenido">');
             res.write('<div class="modal-header" id="caeza">');
-            res.write('<button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">&times;</span> </button>');
+            res.write('<button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="false">&times;</span></button>');
             res.write('</div>');
             res.write('<div class="modal-body" id="capis">'+ response.rows +'</div>');
             res.write('<div class="modal-footer" id="pata">');
