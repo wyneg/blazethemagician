@@ -67,6 +67,7 @@ router.get('/capitulos/:id', (req, res) => {
             '</div>'+
             '</div>'+
             '</div>');*/
+            console.log(response.rows);
             res.send(response.rows);
         })
         .then(e => console.log(e));

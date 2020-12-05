@@ -241,11 +241,12 @@
                 method: 'get'
             })
             .then(response => {
-                //console.log(response);
-                response.text();
+                console.log(response.text());
+                //response.text();
                 //document.getElementById('capis').innerHTML = response.text();
             })
             .then(text => {
+                console.log(text);
                 document.getElementById('capis').innerHTML = text;
             })
             .catch(error => {
