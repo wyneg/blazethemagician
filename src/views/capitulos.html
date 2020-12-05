@@ -242,10 +242,11 @@
             })
             .then(response => {
                 return console.log('respuesta : ' + response);
+                document.getElementById('capis').innerHTML = response;
             })
             .then(data => {
                 //data.json();
-                document.getElementById('capis').innerHTML = data;
+                //document.getElementById('capis').innerHTML = data;
             })
             .catch(error => {
                 console.log('error : ' + error);
