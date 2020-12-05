@@ -16,7 +16,7 @@ router.get('/', (req, res) => {
 router.get('/capitulos/:id', (req, res) => {
     res.render('/app/src/views/capitulos.html', { title: 'Capítulos'});
 
-    var cap = req.id;
+    var cap = req.params.id;
 
     try{
 
