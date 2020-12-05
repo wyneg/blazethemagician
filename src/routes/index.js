@@ -54,6 +54,7 @@ router.get('/capitulos/:id', (req, res) => {
             res.write('</div>');
             res.write('</div>');
             res.write('</div>');
+            res.send()
         })
         .then(e => console.log(e));
     } catch(e){
