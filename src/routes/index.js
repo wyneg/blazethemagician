@@ -13,8 +13,11 @@ router.get('/', (req, res) => {
     res.render('/app/src/views/index.html', { title: 'Bienvenido a Blaze!'});
 });
 
-router.get('/capitulos/:id', (req, res) => {
+router.get('/capitulos', (req, res) => {
     res.render('/app/src/views/capitulos.html', { title: 'Capítulos'});
+});
+
+router.get('/capitulos/:id', (req, res) => {
 
     var cap = req.params.id;
 
