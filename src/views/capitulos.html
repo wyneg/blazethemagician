@@ -223,33 +223,13 @@
     <script>
         function fetchgo(num){
 
-            /*var botones = document.getElementsByName('buttonCap');
-            
-            botones.forEach((boton) => {
-                boton.addEventListener('click', function() {
-                    data = boton.getAttribute('value');
-                    console.log('value : ' + data);
-                });
-            });
-
-            $('.list-group-item').on('click', function () {
-                data = document.getElementById(this.id).value;
-                console.log('value : ' + data);
-            });*/
-
             fetch('/capitulos/' + num, {
                 method: 'get'
             })
-            .then(response => {
-                //response.json();
-                //console.log(response.json());
-                //response.text();
-                document.getElementById('capis').innerHTML = response.text();
+            .then(response => response.text())
+            .then(text => {
+                document.getElementById('capis').innerHTML = text;
             })
-            /*.then(json => {
-                //console.log(json);
-                document.getElementById('capis').innerHTML = json;
-            })*/
             .catch(error => {
                 console.log('error : ' + error);
             });
