@@ -237,19 +237,19 @@
                 console.log('value : ' + data);
             });*/
 
-            fetch('/capitulos/' + num,{
+            fetch('/capitulos/' + num, {
                 method: 'get'
             })
             .then(response => {
-                response.json();
+                //response.json();
                 //console.log(response.json());
                 //response.text();
-                //document.getElementById('capis').innerHTML = response.text();
+                document.getElementById('capis').innerHTML = response.text();
             })
-            .then(json => {
+            /*.then(json => {
                 //console.log(json);
                 document.getElementById('capis').innerHTML = json;
-            })
+            })*/
             .catch(error => {
                 console.log('error : ' + error);
             });

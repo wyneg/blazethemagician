@@ -40,7 +40,7 @@ router.get('/capitulos/:id', (req, res) => {
         const queryString = 'SELECT numcaps FROM blazecaps WHERE numcaps = $1';
 
         client.query(queryString, [cap])
-        .then(response => res.send(response.rows))
+        .then(response => response.rows)
         .then(e => console.log(e));
     } catch(e){
         console.log(e);
