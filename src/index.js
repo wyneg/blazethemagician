@@ -22,28 +22,7 @@ app.listen(process.env.PORT || 5000, () => {
     console.log('Server en puerto : ', process.env.PORT);
 });
 
-/*Local
+/* //Local
 app.listen(5000, () => {
     console.log('Server en puerto : ', 5000);
-});*/
-
-/*const { Client } = require('pg');
-
-const connection = {
-    user: process.env.DB_USER,
-    host: process.env.DB_HOST,
-    database: process.env.DB_DATABASE,
-    password: process.env.DB_PASSWORD,
-    port: process.env.DB_PORT,
-}
-
-const client = new Client(connection);
-
-client.connect();
-
-const queryString = 'SELECT numcaps FROM blazecaps';
-
-client.query(queryString)
-.then(response => console.log(response.rows))
-.then(e => console.log(e));*/
-
+}); */

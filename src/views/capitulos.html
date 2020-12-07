@@ -10,6 +10,61 @@
 </head>
 <body class="img" id="kurobodi" onload="lucesycaps()">
     <%- include ('partials/navigation.html')%>
+<script>
+    function cantCaps(cantidad){
+        var x = 0;
+        var y = 0;
+        var id = '';
+
+        switch(cantidad) {
+            case 1:
+                x = 1;
+                y = 20;
+                id = 'collapse1';
+                break;
+            case 2:
+                x = 21;
+                y = 40;
+                id = 'collapse2';
+                break;
+            case 3:
+                x = 41;
+                y = 60;
+                id = 'collapse3';
+                break;
+            case 4:
+                x = 61;
+                y = 80;
+                id = 'collapse4';
+                break;
+            case 5:
+                x = 81;
+                y = 83;
+                id = 'collapse5';
+                break;
+            default:
+                break;
+        }
+    
+        for(x; x <= y; x++){
+            var buton = document.createElement('a');
+            //buton.setAttribute('class').value = 'list-group-item list-group-item-action list-group-item-dark text-danger mod';
+            //buton.setAttribute('data-toggle').value = 'modal';
+            //buton.setAttribute('data-target').value = '#mod1';
+            //buton.setAttribute('id').value = 'modal' + x;
+            //buton.setAttribute('onClick').value = 'fetchgo('+x+'); pergamino('+x+');';
+            //buton.innerHTML = 'Cap&iacute;tulo ' + x;
+            var imagen = document.createElement('img');
+            //imagen.setAttribute('id').value = 'perg' + x;
+            //imagen.setAttribute('src').value = 'images/pergaminosinquemar.gif';
+            //imagen.setAttribute('alt').value = 'pergamino';
+            var appendTo = document.getElementById(id);
+            appendTo.append(buton);
+            appendTo.append(imagen);
+        }
+    }
+</script>
+
     <!--Sección Capítulos-->
     
 <div class="torch" id="capitulos">
@@ -80,7 +135,7 @@
         </div>
         
              <div class="panel-collapse collapse" id="collapse1">
-                <a class="list-group-item list-group-item-action list-group-item-dark text-danger mod" data-toggle="modal" data-target="#mod1" id="modal1" onClick="fetchgo(1); pergamino(1);">Cap&iacute;tulo 1<img id="perg1" src="images/pergaminosinquemar.gif" alt="pergamino" /></a>
+                <!--<a class="list-group-item list-group-item-action list-group-item-dark text-danger mod" data-toggle="modal" data-target="#mod1" id="modal1" onClick="fetchgo(1); pergamino(1);">Cap&iacute;tulo 1<img id="perg1" src="images/pergaminosinquemar.gif" alt="pergamino" /></a>
                 <a class="list-group-item list-group-item-action list-group-item-dark text-danger mod" data-toggle="modal" data-target="#mod1" id="modal2" onClick="fetchgo(2); pergamino(2);">Cap&iacute;tulo 2<img id="perg2" src="images/pergaminosinquemar.gif" alt="pergamino" /></a>
                 <a class="list-group-item list-group-item-action list-group-item-dark text-danger mod" data-toggle="modal" data-target="#mod1" id="modal3" onClick="showCap(3); pergamino(3);">Cap&iacute;tulo 3<img id="perg3" src="images/pergaminosinquemar.gif" alt="pergamino" /></a> 
                 <a class="list-group-item list-group-item-action list-group-item-dark text-danger mod" data-toggle="modal" data-target="#mod1" id="modal4" onClick="showCap(4); pergamino(4);">Cap&iacute;tulo 4<img id="perg4" src="images/pergaminosinquemar.gif" alt="pergamino" /></a> 
@@ -99,11 +154,13 @@
                 <a class="list-group-item list-group-item-action list-group-item-dark text-danger mod" data-toggle="modal" data-target="#mod1" id="modal17" onClick="showCap(17); pergamino(17);">Cap&iacute;tulo 17<img id="perg17" src="images/pergaminosinquemar.gif" alt="pergamino" /></a>
                 <a class="list-group-item list-group-item-action list-group-item-dark text-danger mod" data-toggle="modal" data-target="#mod1" id="modal18" onClick="showCap(18); pergamino(18);">Cap&iacute;tulo 18<img id="perg18" src="images/pergaminosinquemar.gif" alt="pergamino" /></a>
                 <a class="list-group-item list-group-item-action list-group-item-dark text-danger mod" data-toggle="modal" data-target="#mod1" id="modal19" onClick="showCap(19); pergamino(19);">Cap&iacute;tulo 19<img id="perg19" src="images/pergaminosinquemar.gif" alt="pergamino" /></a>
-                <a class="list-group-item list-group-item-action list-group-item-dark text-danger mod" data-toggle="modal" data-target="#mod1" id="modal20" onClick="showCap(20); pergamino(20);">Cap&iacute;tulo 20<img id="perg20" src="images/pergaminosinquemar.gif" alt="pergamino" /></a>
+                <a class="list-group-item list-group-item-action list-group-item-dark text-danger mod" data-toggle="modal" data-target="#mod1" id="modal20" onClick="showCap(20); pergamino(20);">Cap&iacute;tulo 20<img id="perg20" src="images/pergaminosinquemar.gif" alt="pergamino" /></a>-->
+                cantCaps(1);
             </div>
             
             <div class="panel-collapse collapse" id="collapse2">
-                <a class="list-group-item list-group-item-action list-group-item-dark text-danger mod" data-toggle="modal" data-target="#mod1" id="modal21" onClick="showCap(21); pergamino(21);">Cap&iacute;tulo 21<img id="perg21" src="images/pergaminosinquemar.gif" alt="pergamino" /></a> 
+                cantCaps(2);
+                <!--<a class="list-group-item list-group-item-action list-group-item-dark text-danger mod" data-toggle="modal" data-target="#mod1" id="modal21" onClick="showCap(21); pergamino(21);">Cap&iacute;tulo 21<img id="perg21" src="images/pergaminosinquemar.gif" alt="pergamino" /></a> 
                 <a class="list-group-item list-group-item-action list-group-item-dark text-danger mod" data-toggle="modal" data-target="#mod1" id="modal22" onClick="showCap(22); pergamino(22);">Cap&iacute;tulo 22<img id="perg22" src="images/pergaminosinquemar.gif" alt="pergamino" /></a> 
                 <a class="list-group-item list-group-item-action list-group-item-dark text-danger mod" data-toggle="modal" data-target="#mod1" id="modal23" onClick="showCap(23); pergamino(23);">Cap&iacute;tulo 23<img id="perg23" src="images/pergaminosinquemar.gif" alt="pergamino" /></a> 
                 <a class="list-group-item list-group-item-action list-group-item-dark text-danger mod" data-toggle="modal" data-target="#mod1" id="modal24" onClick="showCap(24); pergamino(24);">Cap&iacute;tulo 24<img id="perg24" src="images/pergaminosinquemar.gif" alt="pergamino" /></a> 
@@ -122,11 +179,12 @@
                 <a class="list-group-item list-group-item-action list-group-item-dark text-danger mod" data-toggle="modal" data-target="#mod1" id="modal37" onClick="showCap(37); pergamino(37);">Cap&iacute;tulo 37<img id="perg37" src="images/pergaminosinquemar.gif" alt="pergamino" /></a>
                 <a class="list-group-item list-group-item-action list-group-item-dark text-danger mod" data-toggle="modal" data-target="#mod1" id="modal38" onClick="showCap(38); pergamino(38);">Cap&iacute;tulo 38<img id="perg38" src="images/pergaminosinquemar.gif" alt="pergamino" /></a>
                 <a class="list-group-item list-group-item-action list-group-item-dark text-danger mod" data-toggle="modal" data-target="#mod1" id="modal39" onClick="showCap(39); pergamino(39);">Cap&iacute;tulo 39<img id="perg39" src="images/pergaminosinquemar.gif" alt="pergamino" /></a>
-                <a class="list-group-item list-group-item-action list-group-item-dark text-danger mod" data-toggle="modal" data-target="#mod1" id="modal40" onClick="showCap(40); pergamino(40);">Cap&iacute;tulo 40<img id="perg40" src="images/pergaminosinquemar.gif" alt="pergamino" /></a>
+                <a class="list-group-item list-group-item-action list-group-item-dark text-danger mod" data-toggle="modal" data-target="#mod1" id="modal40" onClick="showCap(40); pergamino(40);">Cap&iacute;tulo 40<img id="perg40" src="images/pergaminosinquemar.gif" alt="pergamino" /></a>-->
             </div>
         
             <div class="panel-collapse collapse" id="collapse3">
-                <a class="list-group-item list-group-item-action list-group-item-dark text-danger mod" data-toggle="modal" data-target="#mod1" id="modal41" onClick="showCap(41); pergamino(41);">Cap&iacute;tulo 41<img id="perg41" src="images/pergaminosinquemar.gif" alt="pergamino" /></a> 
+                cantCaps(3);
+                <!--<a class="list-group-item list-group-item-action list-group-item-dark text-danger mod" data-toggle="modal" data-target="#mod1" id="modal41" onClick="showCap(41); pergamino(41);">Cap&iacute;tulo 41<img id="perg41" src="images/pergaminosinquemar.gif" alt="pergamino" /></a> 
                 <a class="list-group-item list-group-item-action list-group-item-dark text-danger mod" data-toggle="modal" data-target="#mod1" id="modal42" onClick="showCap(42); pergamino(42);">Cap&iacute;tulo 42<img id="perg42" src="images/pergaminosinquemar.gif" alt="pergamino" /></a> 
                 <a class="list-group-item list-group-item-action list-group-item-dark text-danger mod" data-toggle="modal" data-target="#mod1" id="modal43" onClick="showCap(43); pergamino(43);">Cap&iacute;tulo 43<img id="perg43" src="images/pergaminosinquemar.gif" alt="pergamino" /></a> 
                 <a class="list-group-item list-group-item-action list-group-item-dark text-danger mod" data-toggle="modal" data-target="#mod1" id="modal44" onClick="showCap(44); pergamino(44);">Cap&iacute;tulo 44<img id="perg44" src="images/pergaminosinquemar.gif" alt="pergamino" /></a> 
@@ -145,11 +203,12 @@
                 <a class="list-group-item list-group-item-action list-group-item-dark text-danger mod" data-toggle="modal" data-target="#mod1" id="modal57" onClick="showCap(57); pergamino(57);">Cap&iacute;tulo 57<img id="perg57" src="images/pergaminosinquemar.gif" alt="pergamino" /></a>
                 <a class="list-group-item list-group-item-action list-group-item-dark text-danger mod" data-toggle="modal" data-target="#mod1" id="modal58" onClick="showCap(58); pergamino(58);">Cap&iacute;tulo 58<img id="perg58" src="images/pergaminosinquemar.gif" alt="pergamino" /></a>
                 <a class="list-group-item list-group-item-action list-group-item-dark text-danger mod" data-toggle="modal" data-target="#mod1" id="modal59" onClick="showCap(59); pergamino(59);">Cap&iacute;tulo 59<img id="perg59" src="images/pergaminosinquemar.gif" alt="pergamino" /></a>
-                <a class="list-group-item list-group-item-action list-group-item-dark text-danger mod" data-toggle="modal" data-target="#mod1" id="modal60" onClick="showCap(60); pergamino(60);">Cap&iacute;tulo 60<img id="perg60" src="images/pergaminosinquemar.gif" alt="pergamino" /></a>
+                <a class="list-group-item list-group-item-action list-group-item-dark text-danger mod" data-toggle="modal" data-target="#mod1" id="modal60" onClick="showCap(60); pergamino(60);">Cap&iacute;tulo 60<img id="perg60" src="images/pergaminosinquemar.gif" alt="pergamino" /></a>-->
             </div>
         
             <div class="panel-collapse collapse" id="collapse4">
-                <a class="list-group-item list-group-item-action list-group-item-dark text-danger mod" data-toggle="modal" data-target="#mod1" id="modal61" onClick="showCap(61); pergamino(61);">Cap&iacute;tulo 61<img id="perg61" src="images/pergaminosinquemar.gif" alt="pergamino" /></a> 
+                cantCaps(4);
+                <!--<a class="list-group-item list-group-item-action list-group-item-dark text-danger mod" data-toggle="modal" data-target="#mod1" id="modal61" onClick="showCap(61); pergamino(61);">Cap&iacute;tulo 61<img id="perg61" src="images/pergaminosinquemar.gif" alt="pergamino" /></a> 
                 <a class="list-group-item list-group-item-action list-group-item-dark text-danger mod" data-toggle="modal" data-target="#mod1" id="modal62" onClick="showCap(62); pergamino(62);">Cap&iacute;tulo 62<img id="perg62" src="images/pergaminosinquemar.gif" alt="pergamino" /></a> 
                 <a class="list-group-item list-group-item-action list-group-item-dark text-danger mod" data-toggle="modal" data-target="#mod1" id="modal63" onClick="showCap(63); pergamino(63);">Cap&iacute;tulo 63<img id="perg63" src="images/pergaminosinquemar.gif" alt="pergamino" /></a> 
                 <a class="list-group-item list-group-item-action list-group-item-dark text-danger mod" data-toggle="modal" data-target="#mod1" id="modal64" onClick="showCap(64); pergamino(64);">Cap&iacute;tulo 64<img id="perg64" src="images/pergaminosinquemar.gif" alt="pergamino" /></a> 
@@ -168,11 +227,12 @@
                 <a class="list-group-item list-group-item-action list-group-item-dark text-danger mod" data-toggle="modal" data-target="#mod1" id="modal77" onClick="showCap(77); pergamino(77);">Cap&iacute;tulo 77<img id="perg77" src="images/pergaminosinquemar.gif" alt="pergamino" /></a>
                 <a class="list-group-item list-group-item-action list-group-item-dark text-danger mod" data-toggle="modal" data-target="#mod1" id="modal78" onClick="showCap(78); pergamino(78);">Cap&iacute;tulo 78<img id="perg78" src="images/pergaminosinquemar.gif" alt="pergamino" /></a>
                 <a class="list-group-item list-group-item-action list-group-item-dark text-danger mod" data-toggle="modal" data-target="#mod1" id="modal79" onClick="showCap(79); pergamino(79);">Cap&iacute;tulo 79<img id="perg79" src="images/pergaminosinquemar.gif" alt="pergamino" /></a>
-                <a class="list-group-item list-group-item-action list-group-item-dark text-danger mod" data-toggle="modal" data-target="#mod1" id="modal80" onClick="showCap(80); pergamino(80);">Cap&iacute;tulo 80<img id="perg80" src="images/pergaminosinquemar.gif" alt="pergamino" /></a>
+                <a class="list-group-item list-group-item-action list-group-item-dark text-danger mod" data-toggle="modal" data-target="#mod1" id="modal80" onClick="showCap(80); pergamino(80);">Cap&iacute;tulo 80<img id="perg80" src="images/pergaminosinquemar.gif" alt="pergamino" /></a>-->
             </div>
     
             <div class="panel-collapse collapse" id="collapse5">
-                <a class="list-group-item list-group-item-action list-group-item-dark text-danger mod" data-toggle="modal" data-target="#mod1" id="modal81" onClick="showCap(81); pergamino(81);">Cap&iacute;tulo 81<img id="perg81" src="images/pergaminosinquemar.gif" alt="pergamino" /></a> 
+                cantCaps(5);
+                <!--<a class="list-group-item list-group-item-action list-group-item-dark text-danger mod" data-toggle="modal" data-target="#mod1" id="modal81" onClick="showCap(81); pergamino(81);">Cap&iacute;tulo 81<img id="perg81" src="images/pergaminosinquemar.gif" alt="pergamino" /></a> 
                 <a class="list-group-item list-group-item-action list-group-item-dark text-danger mod" data-toggle="modal" data-target="#mod1" id="modal82" onClick="showCap(82); pergamino(82);">Cap&iacute;tulo 82<img id="perg82" src="images/pergaminosinquemar.gif" alt="pergamino" /></a> 
                 <a class="list-group-item list-group-item-action list-group-item-dark text-danger mod" data-toggle="modal" data-target="#mod1" id="modal83" onClick="showCap(83); pergamino(83);">Cap&iacute;tulo 83<img id="perg83" src="images/pergaminosinquemar.gif" alt="pergamino" /></a> 
                 <a class="list-group-item list-group-item-action list-group-item-dark text-danger mod" data-toggle="modal" data-target="#mod1" id="modal84" onClick="showCap(84); pergamino(84);">Cap&iacute;tulo 84<img id="perg84" src="images/pergaminosinquemar.gif" alt="pergamino" /></a> 
@@ -191,7 +251,7 @@
                 <a class="list-group-item list-group-item-action list-group-item-dark text-danger mod" data-toggle="modal" data-target="#mod1" id="modal97" onClick="showCap(97); pergamino(97);">Cap&iacute;tulo 97<img id="perg97" src="images/pergaminosinquemar.gif" alt="pergamino" /></a>
                 <a class="list-group-item list-group-item-action list-group-item-dark text-danger mod" data-toggle="modal" data-target="#mod1" id="modal98" onClick="showCap(98); pergamino(98);">Cap&iacute;tulo 98<img id="perg98" src="images/pergaminosinquemar.gif" alt="pergamino" /></a>
                 <a class="list-group-item list-group-item-action list-group-item-dark text-danger mod" data-toggle="modal" data-target="#mod1" id="modal99" onClick="showCap(99); pergamino(99);">Cap&iacute;tulo 99<img id="perg99" src="images/pergaminosinquemar.gif" alt="pergamino" /></a>
-                <a class="list-group-item list-group-item-action list-group-item-dark text-danger mod" data-toggle="modal" data-target="#mod1" id="modal100" onClick="showCap(100); pergamino(100);">Cap&iacute;tulo 100<img id="perg100" src="images/pergaminosinquemar.gif" alt="pergamino" /></a>
+                <a class="list-group-item list-group-item-action list-group-item-dark text-danger mod" data-toggle="modal" data-target="#mod1" id="modal100" onClick="showCap(100); pergamino(100);">Cap&iacute;tulo 100<img id="perg100" src="images/pergaminosinquemar.gif" alt="pergamino" /></a>-->
             </div>
     </div>
     
