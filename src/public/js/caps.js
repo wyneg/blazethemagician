@@ -38,5 +38,6 @@ function pergamino(val) {
         setTimeout(function () {
             document.getElementById("modal" + String(val)).innerHTML = "Cap&iacute;tulo "+String(val)+" (leído)";
         }, 2800);
+        localStorage.setItem("Capitulo" + String(val), String(val));
     });
 }
