@@ -18,11 +18,11 @@ app.use(require('./routes/index'));
 
 app.use(express.static(path.join(__dirname, '/public')));
 
-app.listen(process.env.PORT || 5000, () => {
+/* app.listen(process.env.PORT || 5000, () => {
     console.log('Server en puerto : ', process.env.PORT);
-});
+}); */
 
-/* //Local
+//Local
 app.listen(5000, () => {
     console.log('Server en puerto : ', 5000);
-}); */
+});

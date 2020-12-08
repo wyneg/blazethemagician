@@ -9,3 +9,7 @@
 .inicio{padding-top: 100px;}
 .blaze {width: 30%; height: 30%; border: 5px solid #FFD700;}
 /*.custom-control-input:checked~.custom-control-label::before {background-color: #cd7e2e; border-color: #ff0000; box-shadow: none;}*/
+
+@media screen and (max-device-width: 480px) {
+    .blaze {width: 50%; height: 50%; border: 5px solid #FFD700;}
+}

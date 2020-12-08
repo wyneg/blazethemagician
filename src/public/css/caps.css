@@ -18,8 +18,13 @@
 .modal-header .close {position: fixed; top: 20px; right: 250px; width: 40px; height: 40px; opacity: 1; z-index: 10; color: white;}
 
 @media screen and (max-device-width: 480px) {
-	#cap1.modal-dialog {margin: auto 10% auto 10%;}
-	#capis.modal-body p {width: 50%; margin-left: 15%; font-size: 2.0em; color: black;}
+	#caeza.modal-header {background-size: 99% 100%; padding-left: 0%; padding-right: 0%;}
+	#capis.modal-body {background-size: 99% 100%; padding-left: 0%; padding-right: 0%;}
+	#pata.modal-footer {background-size: 99% 100%; padding-left: 0%; padding-right: 0%;}
+	#contenido.modal-content {min-width: 100%; margin-left: 0%; margin-right: -10%;}	
+	#mod1.modal {min-width: 100%; margin-left: 0%; margin-right: -10%;}
+	#cap1.modal-dialog {margin-left: 0%; margin-right: -7%; padding-left: 0%; padding-right: 0%;}
+	#capis.modal-body p {width: 75%; margin-left: 15%; font-size: 2.5em; color: black;}
 	.torch {background-color: black; padding-top: 100px; padding-left: 0px; padding-right: 0px; margin-left: auto; margin-right: auto; height: 100vh;}
 	.modal-header .close {position: fixed; top: 20px; right: 100px; width: 40px; height: 40px; opacity: 1; z-index: 10; color: white;}
 }
