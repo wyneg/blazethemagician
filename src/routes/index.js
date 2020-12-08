@@ -10,7 +10,7 @@ router.use(express.text());
 console.log(__dirname);
 
 
-/* //Remote
+//Remote
 router.get('/', (req, res) => {
     res.render('/app/src/views/index.html', { title: 'Bienvenido a Blaze!'});
 });
@@ -55,9 +55,9 @@ router.get('/galeria', (req, res) => {
 
 router.get('/autor', (req, res) => {
     res.render('/app/src/views/autor.html', { title: 'Wyneg S. Rhuntar'});
-}); */
+});
 
-//Local
+/* //Local
 
 router.get('/', (req, res) => {
 
@@ -108,7 +108,7 @@ router.get('/galeria', (req, res) => {
 
 router.get('/autor', (req, res) => {
     res.render('/home/wyneg/blazethemagician/src/views/autor.html', { title: 'Wyneg S. Rhuntar'});
-});
+}); */
 
 
 module.exports = router;
