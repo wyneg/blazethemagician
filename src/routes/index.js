@@ -40,8 +40,6 @@ router.get('/:id', (req, res) => {
         .then(response => res.send(response.rows))
         .then(e => console.log(e));
 
-        client.end();
-
     } catch(e){
         console.log(e);
     }
