@@ -15,7 +15,7 @@ router.get('/', (req, res) => {
     res.render('/app/src/views/index.html', { title: 'Bienvenido a Blaze!'});
 });
 
-router.get('/:id', (req, res) => {
+/* router.get('/:id', (req, res) => {
 
     var uno = req.params.id;
     try{
@@ -46,7 +46,7 @@ router.get('/:id', (req, res) => {
     } catch(e){
         console.log(e);
     }
-});
+}); */
 
 router.get('/capitulos', (req, res) => {
     res.render('/app/src/views/capitulos.html', { title: 'Capítulos'});
