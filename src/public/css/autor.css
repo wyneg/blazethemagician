@@ -5,3 +5,10 @@
 .fondo {background-color: rgba(255,255,255,0.30);}
 .links {padding: 3px;}
 .link {padding-top: 0px; padding-left: 3px; padding-right: 3px; padding-bottom: 3px;}
+
+@media screen and (max-device-width: 480px) {
+    .fondo {font-size: 1.8em; height: auto; width: auto; margin: auto; padding: 10px;}
+    .pags { height: 200%; width: 200%; font-size: 1.8em;}
+    .links { height: 200%; width: 200%; margin: 0 auto; padding: auto; }
+    .link { height: 200%; width: 200%; margin: 0 auto; padding: auto; display: inline-block;}
+}
