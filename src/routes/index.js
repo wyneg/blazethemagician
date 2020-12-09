@@ -38,7 +38,10 @@ router.get('/:id', (req, res) => {
 
         client.query(queryString, [uno])
         .then(response => res.send(response.rows))
-        .then(e => console.log(e));
+        .then(e => console.log(e))
+        .finally(() => {
+            client.end();
+        });
 
     } catch(e){
         console.log(e);
