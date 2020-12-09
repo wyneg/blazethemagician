@@ -23,18 +23,18 @@ router.get('/:id', (req, res) => {
         const { Client } = require('pg');
 
         const connection = {
-            user: 'postgres',
-            host: 'localhost',
-            database: 'blazecaps',
-            password: '1983yattaze',
-            port: 5432,
+            user: process.env.DB_USER,
+            host: process.env.DB_HOST,
+            database: process.env.DB_DATABASE,
+            password: process.env.DB_PASSWORD,
+            port: process.env.DB_PORT,
         }
 
         const client = new Client(connection);
 
         client.connect();
 
-        var queryString = 'SELECT numcaps FROM caps ORDER BY numcaps DESC LIMIT $1';
+        var queryString = 'SELECT numcaps FROM blazecaps ORDER BY numcaps DESC LIMIT $1';
 
         client.query(queryString, [uno])
         .then(response => res.send(response.rows))
