@@ -236,7 +236,8 @@
             })
             .then(response => response.text())
             .then(text => {
-                document.getElementById('capis').innerHTML = text;
+                var chapter = text.replace('[{"txtcaps":', '').replace('}]', '');
+                document.getElementById('capis').innerHTML = chapter;
             })
             .catch(error => {
                 console.log('error : ' + error);
