@@ -9,7 +9,21 @@
 <link href="https://fonts.googleapis.com/css?family=MedievalSharp" rel="stylesheet">
 </head>
 <body class="img" data-spy="scroll" data-target=".navbar" data-offset="10">
-    
+    <script>
+		
+		fetch('/' + 1, {
+			method: 'get'
+		})
+		.then(response => response.text())
+		.then(text => {
+			var texto = "El último capítulo disponible es : ";
+			var numero = text.replace('[{"numcaps":', '').replace('}]', '');
+			alert(texto + numero);
+		})
+		.catch(error => {
+			console.log('error : ' + error);
+		});
+	</script>
 <header>
   <div class="text-center" id="heder" style="display: block">
   	<img src="images/webp/logoblaze3.webp" class="img-fluid" width="25%" height="25%" alt="logo"/>
