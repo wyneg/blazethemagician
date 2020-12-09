@@ -18,61 +18,6 @@
           </ul>
         </div>	
       </nav>
-<script>
-    function cantCaps(cantidad){
-        var x = 0;
-        var y = 0;
-        var id = '';
-
-        switch(cantidad) {
-            case 1:
-                x = 1;
-                y = 20;
-                id = 'collapse1';
-                break;
-            case 2:
-                x = 21;
-                y = 40;
-                id = 'collapse2';
-                break;
-            case 3:
-                x = 41;
-                y = 60;
-                id = 'collapse3';
-                break;
-            case 4:
-                x = 61;
-                y = 80;
-                id = 'collapse4';
-                break;
-            case 5:
-                x = 81;
-                y = 83;
-                id = 'collapse5';
-                break;
-            default:
-                break;
-        }
-    
-        for(x; x <= y; x++){
-            var buton = document.createElement('a');
-            //buton.setAttribute('class').value = 'list-group-item list-group-item-action list-group-item-dark text-danger mod';
-            //buton.setAttribute('data-toggle').value = 'modal';
-            //buton.setAttribute('data-target').value = '#mod1';
-            //buton.setAttribute('id').value = 'modal' + x;
-            //buton.setAttribute('onClick').value = 'fetchgo('+x+'); pergamino('+x+');';
-            //buton.innerHTML = 'Cap&iacute;tulo ' + x;
-            var imagen = document.createElement('img');
-            //imagen.setAttribute('id').value = 'perg' + x;
-            //imagen.setAttribute('src').value = 'images/pergaminosinquemar.gif';
-            //imagen.setAttribute('alt').value = 'pergamino';
-            var appendTo = document.getElementById(id);
-            appendTo.append(buton);
-            appendTo.append(imagen);
-        }
-    }
-</script>
-
     <!--Sección Capítulos-->
     
 <div class="torch" id="capitulos">
