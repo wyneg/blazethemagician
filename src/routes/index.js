@@ -3,15 +3,40 @@ const express = require('express');
 
 const router = express.Router();
 
-const storage = require('node-persist');
+const fs = require('fs');
 
-storage.init();
+var pIndex = 1;
 
-var counter = 0;
+var pCapitulos = 1;
 
-function visitors () {
-    counter++;
-    storage.setItem('Counter : ', counter);
+var pGaleria = 1;
+
+var pAutor = 1;
+
+function visitors (pagina) {
+    var counter;
+
+    switch(pagina){
+        case 'index':
+            counter = pIndex++;
+            break;
+        case 'capitulos':
+            counter = pCapitulos++;
+            break;
+        case 'galeria':
+            counter = pGaleria++;
+            break;
+        case 'autor':
+            counter = pAutor++;
+            break;
+        default:
+            break;
+    }
+    var registro = 'Visitantes ' + pagina + ' : '  + counter+ '\n';
+    fs.appendFile(__dirname + '/visitantes.txt', registro, (err) => {
+        if (err) throw err;
+        console.log('Número de visitante salvado!');
+    });
 }
 
 router.use(express.urlencoded({extended: true}));
@@ -22,7 +47,7 @@ router.use(express.text());
 //Remote
 router.get('/', (req, res) => {
     res.render('/app/src/views/index.html', { title: 'Bienvenido a Blaze!'});
-    visitors();
+    visitors('index');
 });
 
 router.get('/querycap', (req, res) => {
@@ -56,7 +81,7 @@ router.get('/querycap', (req, res) => {
 
 router.get('/capitulos', (req, res) => {
     res.render('/app/src/views/capitulos.html', { title: 'Capítulos'});
-    visitors();
+    visitors('capitulos');
 });
 
 router.get('/capitulos/:id', (req, res) => {
@@ -91,18 +116,19 @@ router.get('/capitulos/:id', (req, res) => {
 
 router.get('/galeria', (req, res) => {
     res.render('/app/src/views/galeria.html', { title: 'Galería'});
-    visitors();
+    visitors('galeria');
 });
 
 router.get('/autor', (req, res) => {
     res.render('/app/src/views/autor.html', { title: 'Wyneg S. Rhuntar'});
-    visitors();
+    visitors('autor');
 });
 
 /* //Local
 
 router.get('/', (req, res) => {
     res.render('/home/wyneg/blazethemagician/src/views/index.html', { title: 'Bienvenido a Blaze!'});
+    visitors('index');
 });
 
 router.get('/querycap', (req, res) => {
@@ -136,6 +162,7 @@ router.get('/querycap', (req, res) => {
 
 router.get('/capitulos', (req, res) => {
     res.render('/home/wyneg/blazethemagician/src/views/capitulos.html', { title: 'Capítulos'});
+    visitors('capitulos');
 });
 
 router.get('/capitulos/:id', (req, res) => {
@@ -172,10 +199,12 @@ router.get('/capitulos/:id', (req, res) => {
 
 router.get('/galeria', (req, res) => {
     res.render('/home/wyneg/blazethemagician/src/views/galeria.html', { title: 'Galería'});
+    visitors('galeria');
 });
 
 router.get('/autor', (req, res) => {
     res.render('/home/wyneg/blazethemagician/src/views/autor.html', { title: 'Wyneg S. Rhuntar'});
+    visitors('autor');
 }); */
 
 
