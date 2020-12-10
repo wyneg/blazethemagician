@@ -3,16 +3,26 @@ const express = require('express');
 
 const router = express.Router();
 
+const storage = require('node-persist');
+
+await storage.init()
+
+var counter = 0;
+
+function incrementCounter () {
+    counter++;
+    storage.setItem('Counter : ', counter);
+}
+
 router.use(express.urlencoded({extended: true}));
 
 router.use(express.text());
-
-console.log(__dirname);
 
 
 //Remote
 router.get('/', (req, res) => {
     res.render('/app/src/views/index.html', { title: 'Bienvenido a Blaze!'});
+    incrementCounter();
 });
 
 router.get('/querycap', (req, res) => {
@@ -46,6 +56,7 @@ router.get('/querycap', (req, res) => {
 
 router.get('/capitulos', (req, res) => {
     res.render('/app/src/views/capitulos.html', { title: 'Capítulos'});
+    incrementCounter();
 });
 
 router.get('/capitulos/:id', (req, res) => {
@@ -80,10 +91,12 @@ router.get('/capitulos/:id', (req, res) => {
 
 router.get('/galeria', (req, res) => {
     res.render('/app/src/views/galeria.html', { title: 'Galería'});
+    incrementCounter();
 });
 
 router.get('/autor', (req, res) => {
     res.render('/app/src/views/autor.html', { title: 'Wyneg S. Rhuntar'});
+    incrementCounter();
 });
 
 /* //Local
