@@ -32,6 +32,9 @@ function visitors (pagina) {
         default:
             break;
     }
+
+    console.log(__dirname + 'funcion visitantes');
+
     var registro = 'Visitantes ' + pagina + ' : '  + counter+ '\n';
     fs.appendFile(__dirname + '/visitantes.txt', registro, (err) => {
         if (err) throw err;
