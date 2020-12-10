@@ -33,10 +33,8 @@ function visitors (pagina) {
             break;
     }
 
-    console.log(__dirname + 'funcion visitantes');
-
     var registro = 'Visitantes ' + pagina + ' : '  + counter+ '\n';
-    fs.appendFile(__dirname + '/visitantes.txt', registro, (err) => {
+    fs.appendFile('visitantes.txt', registro, (err) => {
         if (err) throw err;
         console.log('Número de visitante salvado!');
     });
