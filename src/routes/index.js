@@ -15,9 +15,8 @@ router.get('/', (req, res) => {
     res.render('/app/src/views/index.html', { title: 'Bienvenido a Blaze!'});
 });
 
-/* router.get('/:id', (req, res) => {
+router.get('/querycap', (req, res) => {
 
-    var uno = req.params.id;
     try{
 
         const { Client } = require('pg');
@@ -34,19 +33,16 @@ router.get('/', (req, res) => {
 
         client.connect();
 
-        var queryString = 'SELECT numcaps FROM blazecaps ORDER BY numcaps DESC LIMIT $1';
+        var queryString = 'SELECT numcaps FROM blazecaps ORDER BY numcaps DESC LIMIT 1';
 
-        client.query(queryString, [uno])
+        client.query(queryString)
         .then(response => res.send(response.rows))
-        .catch(e => console.log(e))
-        .finally(() => {
-            client.end();
-        });
-
+        .catch(e => console.log(e));
+        
     } catch(e){
         console.log(e);
     }
-}); */
+});
 
 router.get('/capitulos', (req, res) => {
     res.render('/app/src/views/capitulos.html', { title: 'Capítulos'});
@@ -96,9 +92,8 @@ router.get('/', (req, res) => {
     res.render('/home/wyneg/blazethemagician/src/views/index.html', { title: 'Bienvenido a Blaze!'});
 });
 
-router.get('/:id', (req, res) => {
+router.get('/querycap', (req, res) => {
 
-    var uno = req.params.id;
     try{
 
         const { Client } = require('pg');
@@ -115,11 +110,11 @@ router.get('/:id', (req, res) => {
 
         client.connect();
 
-        var queryString = 'SELECT numcaps FROM caps ORDER BY numcaps DESC LIMIT $1';
+        var queryString = 'SELECT numcaps FROM caps ORDER BY numcaps DESC LIMIT 1';
 
-        client.query(queryString, [uno])
+        client.query(queryString)
         .then(response => res.send(response.rows))
-        .then(e => console.log(e));
+        .catch(e => console.log(e));
 
     } catch(e){
         console.log(e);
