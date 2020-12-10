@@ -21,7 +21,7 @@
     .index {font-size: 1.8em; width: auto; height: auto;}
     #textoCaeza, #textoCapis, #textoPata {font-size: 1.5rem;}
     #caeza.modal-header, #capis.modal-body, #pata.modal-footer {margin-left: -140px; }
-    #caeza.modal-header {padding: 25px;}
+    #caeza.modal-header {padding: 23px;}
     #capis.modal-body {padding: 21px;}
     .modal-header .close {position: fixed; top: 20px; right: 100px; width: 40px; height: 40px; opacity: 1; z-index: 10; color: white;}
 }
