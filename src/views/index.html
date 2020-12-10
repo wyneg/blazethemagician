@@ -22,10 +22,28 @@
 		<li class="nav-item" id="nav2"><a class="nav-link text-light dirweb" id="capitulos1" href="/capitulos"><img src="images/espacio.png" alt="llama" id="fuego2" style="display: inline-block"/><img src="images/webp/caps.webp" id="imgCap" alt="caps" title="Chapters" /></a></li>
 		<li class="nav-item" id="nav3"><a class="nav-link text-light dirweb" id="galeria1" href="/galeria"><img src="images/espacio.png" alt="llama" id="fuego3"  style="display: inline-block"/><img src="images/webp/galeria.webp" id="imgGal" alt="gallery" title="Gallery" /></a></li>
 		<li class="nav-item" id="nav4"><a class="nav-link text-light dirweb" id="autor1" href="/autor"><img src="images/espacio.png" alt="llama" id="fuego4" style="display: inline-block"/><img src="images/webp/sobreautor.webp" id="imgAut" alt="autor" title="Autor" /></a></li>
+		<li class="nav-item" id="nav4"><a class="nav-link text-light dirweb" id="capdisp"><button class="list-group-item text-danger" id="capBlaze" data-toggle="modal" data-target="#mod1">Último Capítulo</button></li>
 	  </ul>
 	</div>	
   </nav>    
 <!--Sección Inicio-->
+
+<div class="row modal fade bd-example-modal-lg" id="mod1" tabindex="-1" role="dialog" aria-hidden="true">
+	<div class="modal-dialog modal-lg" role="document" id="cap1">
+	  <div class="modal-content text-center" id="contenido">
+		<div style="color: black;" class="modal-header" id="caeza">
+			<div id="textoCaeza" class="col-sm-9 col-lg-7 text-center"></div>
+		  	<button style="color: white;" type="button" class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">&times;</span> </button>
+		</div>
+		<div style="color: black;" class="modal-body" id="capis">
+			<div id="textoCapis" class="col-sm-9 col-lg-7 text-center"></div>
+		</div>
+		<div style="color: black;" class="modal-footer" id="pata">
+			<div id="textoPata" class="col-sm-9 col-lg-7 text-center"></div>	
+		</div>
+	  </div>
+	</div>
+  </div>
 
 <div class="container inicio" id="inicio">
 	<div>
@@ -52,15 +70,15 @@
 <script src="js/navbar.js?v=2.0"></script>
 <script src="js/hechizos.js?v=2.0"></script>
 <script>
-		
 	fetch('/querycap' , {
 		method: 'get'
 	})
 	.then(response => response.text())
 	.then(text => {
-		var texto = "El último capítulo disponible es : ";
 		var numero = text.replace('[{"numcaps":', '').replace('}]', '');
-		alert(texto + numero);
+		document.getElementById('textoCaeza').innerHTML = '<p>El último capítulo disponible es:</p>';
+		document.getElementById('textoCapis').innerHTML = '<p> Capítulo '+numero+'</p>';
+		document.getElementById('textoPata').innerHTML = '<p>Atentamente, Blaze. ;)</p>';
 	})
 	.catch(error => {
 		console.log('error : ' + error);
