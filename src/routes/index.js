@@ -5,9 +5,14 @@ const router = express.Router();
 
 const storage = require('node-persist');
 
-await storage.init()
+storage.init();
 
 var counter = 0;
+
+function visitors () {
+    counter++;
+    storage.setItem('Counter : ', counter);
+}
 
 router.use(express.urlencoded({extended: true}));
 
@@ -17,8 +22,7 @@ router.use(express.text());
 //Remote
 router.get('/', (req, res) => {
     res.render('/app/src/views/index.html', { title: 'Bienvenido a Blaze!'});
-    counter++;
-    storage.setItem('Counter : ', counter);
+    visitors();
 });
 
 router.get('/querycap', (req, res) => {
@@ -52,8 +56,7 @@ router.get('/querycap', (req, res) => {
 
 router.get('/capitulos', (req, res) => {
     res.render('/app/src/views/capitulos.html', { title: 'Capítulos'});
-    counter++;
-    storage.setItem('Counter : ', counter);
+    visitors();
 });
 
 router.get('/capitulos/:id', (req, res) => {
@@ -88,14 +91,12 @@ router.get('/capitulos/:id', (req, res) => {
 
 router.get('/galeria', (req, res) => {
     res.render('/app/src/views/galeria.html', { title: 'Galería'});
-    counter++;
-    storage.setItem('Counter : ', counter);
+    visitors();
 });
 
 router.get('/autor', (req, res) => {
     res.render('/app/src/views/autor.html', { title: 'Wyneg S. Rhuntar'});
-    counter++;
-    storage.setItem('Counter : ', counter);
+    visitors();
 });
 
 /* //Local
