@@ -4,7 +4,7 @@
 #heder, #barra {background-color: black; border-top: solid #FFFFFF 1px; border-bottom: solid #FFFFFF 1px;}
 
 /* Inicio */
-.index {border: 20px solid transparent; border-image-source: url(../images/lis.png); border-image-slice: 25 25; border-image-repeat: space; font-family: 'MedievalSharp', cursive; font-size: 1.5em; font-weight: bolder; color: rgb(53, 51, 155); text-shadow: -1px 0 rgb(255, 208, 0), 0 1px rgb(255, 208, 0), 1px 0 rgb(255, 208, 0), 0 -1px rgb(255, 208, 0); padding: 20px; width: 650px; height: 670px; margin: auto;}
+.index {border: 20px solid transparent; border-image-source: url(../images/lis.png); border-image-slice: 25 25; border-image-repeat: space; font-family: 'MedievalSharp', cursive; font-size: 1.5em; font-weight: bolder; color: rgb(78, 76, 158); text-shadow: -1px 0 rgb(0, 0, 0), 0 1px rgb(0, 0, 0), 1px 0 rgb(0, 0, 0), 0 -1px rgb(0, 0, 0); padding: 20px; width: 650px; height: 670px; margin: auto;}
 .fondo {background-color: rgba(255,255,255,0.30);}
 .inicio{padding-top: 100px;}
 .blaze {width: 30%; height: 30%; border: 5px solid #FFD700;}
