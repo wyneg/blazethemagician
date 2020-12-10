@@ -34,7 +34,7 @@ function visitors (pagina) {
     }
 
     var registro = 'Visitantes ' + pagina + ' : '  + counter+ '\n';
-    fs.appendFile('visitantes.txt', registro, (err) => {
+    fs.appendFile('/app/src/routes/visitantes.txt', registro, (err) => {
         if (err) throw err;
         console.log('Número de visitante salvado!');
     });
