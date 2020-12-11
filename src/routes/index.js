@@ -45,7 +45,6 @@ router.use(express.urlencoded({extended: true}));
 
 router.use(express.text());
 
-
 //Remote
 router.get('/', (req, res) => {
     res.render('/app/src/views/index.html', { title: 'Bienvenido a Blaze!'});
