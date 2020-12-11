@@ -217,7 +217,7 @@
               <div class="modal-body" id="capis">
               </div>
             <div class="modal-footer" id="pata">
-              </div>
+            </div>
         </div>
       </div>
     </div>
@@ -236,7 +236,7 @@
             })
             .then(response => response.text())
             .then(text => {
-                var chapter = text.replace('[{"txtcaps":"', '').replace('"}]', '').replace(/[\n\r]/g, '');
+                var chapter = text.replace(/\\n/g,'').replace('[{"txtcaps":"', '').replace('"}]', '');
                 document.getElementById('capis').innerHTML = chapter;
             })
             .catch(error => {
