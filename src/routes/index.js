@@ -65,6 +65,12 @@ router.get('/querycap', (req, res) => {
             database: process.env.DB_DATABASE,
             password: process.env.DB_PASSWORD,
             port: process.env.DB_PORT,
+            ssl: true,
+                extra: {
+                    ssl: {
+                    rejectUnauthorized: false,
+                    },
+                }
         }
 
         const client = new Client(connection);
@@ -102,6 +108,12 @@ router.get('/capitulos/:id', (req, res) => {
             database: process.env.DB_DATABASE,
             password: process.env.DB_PASSWORD,
             port: process.env.DB_PORT,
+            ssl: true,
+                extra: {
+                    ssl: {
+                    rejectUnauthorized: false,
+                    },
+                }
         }
 
         const client = new Client(connection);
