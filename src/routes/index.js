@@ -1,6 +1,8 @@
 const { response } = require('express');
 const express = require('express');
 
+require('dotenv').config();
+
 const router = express.Router();
 
 const fs = require('fs');
