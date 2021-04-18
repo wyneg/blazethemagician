@@ -76,7 +76,7 @@ router.get('/querycap', (req, res) => {
 
         client.query(queryString)
         .then(response => res.send(response.rows))
-        .catch(e => console.log(e));
+        .then(e => console.log(e));
         
     } catch(e){
         console.log(e);
