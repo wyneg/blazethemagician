@@ -125,10 +125,10 @@ router.get('/autor', (req, res) => {
     visitors('autor');
 });
 
-/* //Local
+//Local
 
-router.get('/', (req, res) => {
-    res.render('/home/wyneg/blazethemagician/src/views/index.html', { title: 'Bienvenido a Blaze!'});
+/* router.get('/', (req, res) => {
+    res.render('/mnt/pavo/blazethemagician/src/views/index.html', { title: 'Bienvenido a Blaze!'});
     visitors('index');
 });
 
@@ -150,7 +150,7 @@ router.get('/querycap', (req, res) => {
 
         client.connect();
 
-        var queryString = 'SELECT numcaps FROM caps ORDER BY numcaps DESC LIMIT 1';
+        var queryString = 'SELECT numcaps FROM blazecaps ORDER BY numcaps DESC LIMIT 1';
 
         client.query(queryString)
         .then(response => res.send(response.rows))
@@ -162,7 +162,7 @@ router.get('/querycap', (req, res) => {
 });
 
 router.get('/capitulos', (req, res) => {
-    res.render('/home/wyneg/blazethemagician/src/views/capitulos.html', { title: 'Capítulos'});
+    res.render('/mnt/pavo/blazethemagician/src/views/capitulos.html', { title: 'Capítulos'});
     visitors('capitulos');
 });
 
@@ -186,7 +186,7 @@ router.get('/capitulos/:id', (req, res) => {
 
         client.connect();
 
-        var queryString = 'SELECT txtcaps FROM caps WHERE numcaps = $1';
+        var queryString = 'SELECT txtcaps FROM blazecaps WHERE numcaps = $1';
 
         client.query(queryString, [cap])
         .then(response => res.send(response.rows))
@@ -199,12 +199,12 @@ router.get('/capitulos/:id', (req, res) => {
 });
 
 router.get('/galeria', (req, res) => {
-    res.render('/home/wyneg/blazethemagician/src/views/galeria.html', { title: 'Galería'});
+    res.render('/mnt/pavo/blazethemagician/src/views/galeria.html', { title: 'Galería'});
     visitors('galeria');
 });
 
 router.get('/autor', (req, res) => {
-    res.render('/home/wyneg/blazethemagician/src/views/autor.html', { title: 'Wyneg S. Rhuntar'});
+    res.render('/mnt/pavo/blazethemagician/src/views/autor.html', { title: 'Wyneg S. Rhuntar'});
     visitors('autor');
 }); */
 
