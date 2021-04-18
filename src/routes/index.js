@@ -78,9 +78,6 @@ router.get('/querycap', (req, res) => {
         .then(() => 'Last Chapter')
         .catch(e => console.error(e));
         
-        client.end()
-        .then(() => 'Disconnected')
-        .catch(e => console.error(e));
     } catch(e){
         console.log(e);
     }
@@ -118,9 +115,6 @@ router.get('/capitulos/:id', (req, res) => {
         .then(() => 'Chapter Retrieved')
         .catch(e => console.error(e));
 
-        client.end()
-        .then(() => 'Disconnected')
-        .catch(e => console.error(e));
     } catch(e){
         console.log(e);
     }
