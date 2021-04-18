@@ -8,9 +8,9 @@
 .fondo {background-color: rgb(255,255,255,0.30);}
 .inicio{padding-top: 100px;}
 .blaze {width: 30%; height: 30%; border: 5px solid #FFD700;}
-#caeza.modal-header {background-image: url(../images/webp/pergamino1.webp); background-repeat: no-repeat; border: 0 none; display: list-item; padding: 24px; margin: 0;}
-#capis.modal-body {background-image: url(../images/webp/pergamino2.webp); background-repeat: repeat-y; border: 0 none; display: list-item; padding: 7px; margin: 0; }
-#pata.modal-footer {background-image: url(../images/webp/pergamino3.webp); background-repeat: no-repeat; border: 0 none; display: list-item; padding: 30px; margin: 0; }
+#caezaIndex.modal-header {background-image: url(../images/webp/pergamino1.webp); background-repeat: no-repeat; border: 0 none; display: list-item; padding: 24px; margin: 0;}
+#capisIndex.modal-body {background-image: url(../images/webp/pergamino2.webp); background-repeat: repeat-y; border: 0 none; display: list-item; padding: 7px; margin: 0; }
+#pataIndex.modal-footer {background-image: url(../images/webp/pergamino3.webp); background-repeat: no-repeat; border: 0 none; display: list-item; padding: 30px; margin: 0; }
 #contenido.modal-content{background-color: transparent !important; width: 100vw;}
 .modal-header .close {position: fixed; top: 20px; right: 250px; width: 40px; height: 40px; opacity: 1; z-index: 10; color: white;}
 #capBlaze {font-size: 1.3rem; font-weight: bold;}
@@ -23,8 +23,8 @@
     .index {font-size: 1.8em; width: auto; height: auto;}
     #capBlaze {font-size: 1.3rem; font-weight: bold;}
     #textoCaeza, #textoCapis, #textoPata {font-size: 1.7rem; font-family: 'MedievalSharp', cursive; color: rgb(0, 0, 0); text-shadow: -1px 0 rgb(255, 255, 255), 0 1px rgb(255, 255, 255), 1px 0 rgb(255, 255, 255), 0 -1px rgb(255, 255, 255);}
-    #caeza.modal-header, #capis.modal-body, #pata.modal-footer {margin-left: -140px; }
-    #caeza.modal-header {padding: 21px;}
-    #capis.modal-body {padding: 21px;}
+    #caezaIndex.modal-header, #capisIndex.modal-body, #pataIndex.modal-footer {margin-left: -140px; }
+    #caezaIndex.modal-header {padding: 21px;}
+    #capisIndex.modal-body {padding: 21px;}
     .modal-header .close {position: fixed; top: 20px; right: 100px; width: 40px; height: 40px; opacity: 1; z-index: 10; color: white;}
 }
