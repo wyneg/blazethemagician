@@ -76,7 +76,8 @@ router.get('/querycap', (req, res) => {
 
         client.query(queryString)
         .then(response => res.send(response.rows))
-        .then(e => console.log(e));
+        .then(e => console.log(e))
+        .catch(e => console.error(e));
         
     } catch(e){
         console.log(e);
@@ -113,7 +114,8 @@ router.get('/capitulos/:id', (req, res) => {
 
         client.query(queryString, [cap])
         .then(response => res.send(response.rows))
-        .then(e => console.log(e));
+        .then(e => console.log(e))
+        .catch(e => console.error(e));
     } catch(e){
         console.log(e);
     }
